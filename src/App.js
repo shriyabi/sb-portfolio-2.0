@@ -11,7 +11,7 @@ import 'animate.css';
 function App() {
   return (
     <>
-      <div class="bg-red-400 flex flex-row justify-center items-center rounded-r-sm w-1/5 pl-1">
+      <div class="bg-red-400 flex flex-row justify-center items-center rounded-r-sm w-2/5 md:w-1/5 pl-1">
         <div class="w-4/5 flex flex-row">
           <h2 class="mr-3 my-1 text-sm rounded-3xl bg-slate-100 px-1"> S </h2>
           <h2 class="text-xl font-semibold">SHROOGLE</h2>
@@ -27,25 +27,25 @@ function App() {
           <div class="w-[2em] rounded-l-xl px-2 mr-2 bg-red-500 animate__animated animate__heartBeat animate__delay-2s"> &#128269; </div>
           <TypingAnimation />
         </div>
-        <div class="w-full h-full flex flex-row animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="w-auto px-5 py-4 mb-7 bg-red-200 mr-5 min-h-screen rounded-xl border-4">
-            <div class="sticky top-0 w-full flex-col flex text-3xl items-start">
+        <div class="w-full px-5 md:p-0 h-full flex flex-col md:flex-row animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="w-full h-auto md:w-auto px-5 py-4 mb-7 bg-red-200 mr-5 md:min-h-screen rounded-xl border-4">
+            <div class="sticky top-0 w-full justify-center items-center flex-row md:flex-col flex text-3xl items-start">
               <a href="#Home" class="zoom-out"> &#x1f3e0; </a>
-              <a href="#Skills" class="mt-8 zoom-out"> &#128295; </a>
-              <a href="#Experience" class="mt-8 zoom-out"> &#x1f3eb; </a>
-              <a href="#Projects" class="mt-8 zoom-out"> &#xe11e; </a>
-              <a href="#Contact" class="mt-8 zoom-out"> &#x1f4ac; </a>
+              <a href="#Skills" class="ml-8 md:mt-8 zoom-out"> &#128295; </a>
+              <a href="#Experience" class="ml-8 md:mt-8 zoom-out"> &#x1f3eb; </a>
+              <a href="#Projects" class="ml-8 md:mt-8 zoom-out"> &#xe11e; </a>
+              <a href="#Contact" class="ml-8 md:mt-8 zoom-out"> &#x1f4ac; </a>
             </div>
           </div>
 
           <div class="w-full flex flex-col">
             <h class="text-5xl font-semibold animate__animated animate__delay-3s animate__rubberBand"> Shriya Biddala </h>
             <Description />
-            <div class="w-full flex justify-center">
-              <div class="w-1/2 bg-red-700 h-[15em]">
+            <div class="w-full flex flex-col md:flex-row justify-center">
+              <div class="w-full md:w-1/2 bg-red-700 h-[15em]">
                 image
               </div>
-              <div class="w-1/2 mx-3 mb-10 rounded-lg flex text-end justify-center bg-red-100 h-auto p-3">
+              <div class="w-full md:w-1/2 md:mx-3 mb-10 rounded-lg flex text-end justify-center bg-red-100 h-auto p-3">
                 CS enthusiast junior student at the College of Engineering at the University of Michigan pursing Computer Science and Electrical Engineering. Partook in multiple research projects at the university level, notably developing a mental chatbot, on top of engineering, such as developing the bionic knee with Texas Instruments technology and Lego Mindstromer bricks. Aspires to have a specialized focus on intelligent devices and applications of artificial intelligence in community. Pushes for equity and diversity in the technology sphere.
               </div>
             </div>
@@ -141,7 +141,7 @@ function App() {
             <h class='text-base italic'> Click each tab to learn more! </h> 
             <ProjectsAndHonors />
           </div>
-          <div class="w-1/3 min-h-screen ml-10 flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight">
+          <div class="w-full md:w-1/3 min-h-screen md:ml-10 flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight">
             <h2 class='items-start'> LASTEST NEWS </h2>
             <div class="w-full my-2 h-auto bg-red-200 p-3 border-4 align-end rounded-xl h-1/4">
               <h3 class="text-xl overline"> For Michigan Website</h3>
@@ -175,20 +175,20 @@ function App() {
         <h2 class='text-center text-xl underline mb-3'> CONTACT </h2>
         
         
-        <form class="w-3/4 p-2 mb-7 bg-red-500  rounded-lg flex flex-col justify-center flex items-center animated__animate animate__delay-4s animate__fadeIn">
+        <form class="px-8 py-4 w-full md:w-3/4 md:p-2 mb-7 bg-red-500  rounded-lg flex flex-col justify-center flex items-center animated__animate animate__delay-4s animate__fadeIn">
     <div class="w-full flex flex-col md:flex-row justify-center items-center">
     <input 
 
         type="text" 
         placeholder="Name" 
-        class="p-1 mr-1 mb-2  text-red-900 focus:outline-red-900 w-1/2 border-2 border-red-500 bg-red-100 rounded" 
+        class="p-1 md:mr-1 mb-2  text-red-900 focus:outline-red-900 w-full md:w-1/2 border-2 border-red-500 bg-red-100 rounded" 
         required 
     />
 
     <input 
         type="email" 
         placeholder="Email" 
-        class="p-1 ml-1 text-red-900  focus:outline-red-900  mb-2 w-1/2 border-2 border-red-500 bg-red-100 rounded" 
+        class="p-1 md:ml-1 text-red-900  focus:outline-red-900  mb-2 w-full md:w-1/2 border-2 border-red-500 bg-red-100 rounded" 
         required 
     />
     </div>
@@ -202,7 +202,7 @@ function App() {
 
     <button 
         type="submit" 
-        class="bg-red-500 text-white p-1 mt-3 rounded  hover:bg-red-600"
+        class="bg-red-800 text-white p-1 mt-3 rounded  hover:bg-red-600"
     >
         Submit
     </button>

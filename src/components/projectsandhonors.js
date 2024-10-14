@@ -122,9 +122,9 @@ function ProjectsAndHonors() {
                 ) : (
                     // PAST PROJECTS content
                     <>
-    <div className="flex flex-wrap justify-start"> {/* Container for all projects */}
+    <div className="flex flex-wrap justify-start">
         {projects.map((project, index) => (
-            <div key={index} className="w-1/4 p-5 flex flex-col justify-between items-center text-center"> {/* Adjusted for vertical alignment */}
+            <div key={index} className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"> {/* Adjusted for vertical alignment */}
                 <Award
                     awardName={project.awardName}
                     imgUrl={project.imgUrl} 
