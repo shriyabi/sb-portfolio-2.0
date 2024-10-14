@@ -1,3 +1,5 @@
+@import 'animate.css';
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.icons{
+  box-shadow: 0.125em 0.125em 0.75em 0.5em rgba(255, 0, 0, 0.337);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  animation: bounce 0s infinite;
+}
+.bounce:hover {
+  animation: bounce 1s infinite;
+}
+
+
+.zoom-out:hover {
+  animation: zoomIn 0.5s forwards;
 }
