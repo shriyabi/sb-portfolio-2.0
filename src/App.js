@@ -137,6 +137,8 @@ function App() {
               </div>
             </div>
             <div class="border-2 mr-5 my-8" id="Projects"></div>
+            <h class='text-xl underline'> PROJECTS + HONORS </h>
+            <h class='text-base italic'> Click each tab to learn more! </h> 
             <ProjectsAndHonors />
           </div>
           <div class="w-1/3 min-h-screen ml-10 flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight">
