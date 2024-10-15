@@ -40,7 +40,7 @@
 }
 
 .icons{
-  box-shadow: 0.125em 0.125em 0.75em 0.5em rgba(255, 0, 0, 0.337);
+  box-shadow: 0.125em 0.125em 0.75em 0.5em rgba(255, 255, 255, 0.337);
 }
 
 @keyframes bounce {
@@ -65,4 +65,27 @@
 
 .zoom-out:hover {
   animation: zoomIn 0.5s forwards;
+}
+
+.shriya{
+  filter: drop-shadow(0em 0em 2em #e53cff)
+}
+
+.purple{
+  filter: drop-shadow(0em 0em 1em #8a5cf6);
+  box-shadow: 0em 0em 1em #8a5cf6a9;
+}
+
+.blue{
+  filter: drop-shadow(0em 0em 1em #7dd3fc);
+  box-shadow: 0em 0em 1em #7dd4fccb;
+}
+
+.pink{
+  filter: drop-shadow(0em 0em 1em #e879f9);
+  box-shadow: 0em 0em 1em #e879f9a9;
+}
+
+.yellow{
+  box-shadow: 0em 0em 1em #fde047a9;
 }

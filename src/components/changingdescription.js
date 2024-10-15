@@ -11,7 +11,7 @@ function Description() {
     }, [titles.length]);
 
     return (
-        <h1 className="text-xl mb-3 text-red-600">
+        <h1 className="text-xl mb-3 text-fuchsia-400">
             {titles[Curr]}
         </h1>
     );

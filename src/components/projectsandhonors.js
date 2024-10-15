@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import Project from './projects'; 
 import Award from './awards';
+
 function Modal({ isOpen, onClose, project }) {
     if (!isOpen) return null; //make sure model is not open
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center lg:items-end justify-center">
             <div className="bg-white p-5 rounded-md max-w-md w-full">
-                <h2 className="text-2xl overline text-red-900 font-bold mb-2">{project.awardName}</h2>
+                <h2 className="text-2xl overline text-cyan-500 font-bold mb-2">{project.awardName}</h2>
                 <p>{project.awardDescription}</p>
                 <p className='italic text-sm pt-3'>SKILLS: {project.skills}</p>
                 <button
                     onClick={onClose}
-                    className="mt-4 bg-red-500 text-white px-4 py-2 rounded">
+                    className="mt-4 bg-yellow-500 text-neutral-700 text-white px-4 py-2 rounded">
                     Close
                 </button>
             </div>
@@ -33,58 +34,65 @@ function ProjectsAndHonors() {
         {
             awardName: "For Michigan Website",
             awardDescription: "The official website for the For Michigan non-profit organization, embedded with interactive features, such as color changing background on click, and personalized voting information pages for each college. Includes a 300-person staff directory using MySQL. Check it out at www.4mich.org.",
-            skills:"HTML, CSS, JS, TailwindCSS, GoogleAPI",
-            imgUrl: ""
+            skills:"HTML, CSS, JavaScript, TailwindCSS, GoogleAPI, MySQL, Node.js, Express.js",
+            imgUrl: "forMich"
         },
         {
             awardName: "OneVote",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"HTML/CSS, GPT-4 API", 
+            imgUrl: "onevote"
         },
         {
             awardName: "GreenBrother",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"ReactJS, React Native, TailwindCSS",
+            imgUrl: "greenbro"
         },
         {
             awardName: "DocuDog",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"Python, Gemini 1.5 Pro API, LLM Prompt Engineering",
+            imgUrl: "docudog"
         },
         {
             awardName: "Chatbot for Mental Health Awareness",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"PyTorch, Python, Kaggle, Pandas, Google Cloud, Google Search API",
+            imgUrl: "demo"
         },
         {
             awardName: "A.I. Handwriting Transformer Model",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"OpenCV, PyTorch, HTML/CSS/JS, Express.js",
+            imgUrl: "ai"
         },
         {
             awardName: "RoboPicasso",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"Python, OpenCV",
+            imgUrl: "robo"
         },
         {
             awardName: "BioKnee",
             awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            imgUrl: ""
+            skills:"Electrical Circuits, Python, Programming",
+            imgUrl: "bio"
         },
         
     ];
 
     return (
         <div className="w-full mb-7">
-            <div className="w-full rounded-t-lg flex flex-row bg-red-200 text-slate-100 text-xl">
+            <div className="w-full rounded-t-lg flex flex-row bg-fuchsia-200 text-slate-100 text-xl">
                 <h3
                     onClick={() => setActiveTab('projects')}
-                    className={`py-2 px-1 hover:bg-red-100 hover:text-red-900 text-slate-100 text-xl cursor-pointer ${activeTab === 'projects' ? 'bg-red-500' : 'bg-red-700'}`}>
+                    className={`py-2 px-1 hover:bg-cyan-100 text-neutral-700 text-xl cursor-pointer ${activeTab === 'projects' ? 'bg-yellow-400' : 'bg-cyan-400'}`}>
                     PAST PROJECTS
                 </h3>
                 <h3
                     onClick={() => setActiveTab('honors')}
-                    className={`py-2 px-1 ml-1 hover:bg-red-100 hover:text-red-900 text-slate-100 text-xl cursor-pointer ${activeTab === 'honors' ? 'bg-red-500' : 'bg-red-700'}`}>
+                    className={`py-2 px-1 ml-1 hover:bg-cyan-100 text-neutral-700 text-xl cursor-pointer ${activeTab === 'honors' ? 'bg-yellow-400' : 'bg-cyan-400'}`}>
                     HONORS
                 </h3>
             </div>
@@ -124,14 +132,14 @@ function ProjectsAndHonors() {
                     <>
     <div className="flex flex-wrap justify-start">
         {projects.map((project, index) => (
-            <div key={index} className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"> {/* Adjusted for vertical alignment */}
+            <div key={index} className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center">
                 <Award
                     awardName={project.awardName}
                     imgUrl={project.imgUrl} 
                 />
                 <button
                     onClick={() => handleReadMore(project)}
-                    className="mt-2 text-red-500 underline">
+                    className="mt-2 text-violet-500 underline">
                     Read More
                 </button>
             </div>
