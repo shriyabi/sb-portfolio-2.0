@@ -81,8 +81,7 @@ function App() {
                   <h class="text-xl mb-5 md:mb-0 md:text-2xl text-slate-100 font-semibold"> Hello! Hola! Namaste! </h>
               </div>
               <div class="w-full mt-5 md:mt-0 md:text-lg md:w-1/2 md:mx-3 mb-10 rounded-lg flex text-end justify-center border-4 blue border-cyan-400 text-slate-100 font-semibold h-auto p-3">
-                CS enthusiast junior student at the College of Engineering at the University of Michigan pursing Computer Science and Electrical Engineering. Partook in multiple research projects at the university level, notably developing a mental chatbot, on top of engineering, such as developing the bionic knee with Texas Instruments technology and Lego Mindstromer bricks. Aspires to have a specialized focus on intelligent devices and applications of artificial intelligence in community. Pushes for equity and diversity in the technology sphere.
-              </div>
+              Hello! I am a Computer Science enthusiast at the University of Michigan's College of Engineering and a freelance full-stack developer, having built websites for organizations like For Michigan and other clients. I have also contributed to several machine learning research projects, including developing a mental health chatbot. My passions lie in artificial intelligence, automation, and creating innovative web applications by blending creativity with technology. As an advocate for equity and diversity in tech, I aim to merge my technical and activist efforts to build equitable AI-driven solutions for under-resourced communities and develop web applications that have a positive social and business impact.</div>
             </div>
             <div class="border-2 mr-5 my-4"></div>
 
@@ -172,8 +171,8 @@ function App() {
               </div>
             </div>
             <div class="border-2 mr-5 my-8" id="Projects"></div>
-            <h class='text-xl underline text-yellow-400 font-semibold'> PROJECTS + HONORS </h>
-            <h class='text-base italic text-cyan-300'> Click each tab to learn more! </h>
+            <h class='text-xl underline text-cyan-300 font-semibold'> PROJECTS + HONORS </h>
+            <h class='text-base italic text-yellow-400'> Click each tab to learn more! </h>
             <ProjectsAndHonors />
           </div>
           <div class="border-2 mr-5 my-8" id="Projects"></div>
