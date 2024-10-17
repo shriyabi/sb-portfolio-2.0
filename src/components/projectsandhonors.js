@@ -132,7 +132,7 @@ function ProjectsAndHonors() {
                     <>
     <div className="flex flex-wrap justify-start">
         {projects.map((project, index) => (
-            <div key={index} className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center">
+            <div key={index} className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center max-h-2/3">
                 <Award
                     awardName={project.awardName}
                     imgUrl={project.imgUrl} 

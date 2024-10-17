@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function Description() {
-    const titles = ["Tech Enthusiast", "Equity Activist", "Full-Stack Developer", "AI Enthusiast"];
+    const titles = ["Tech Enthusiast", "Equity Activist", "Arduino Tinker-er", "Full-Stack Developer", "AI Enthusiast"];
     const [Curr, setCurr] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {

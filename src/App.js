@@ -44,7 +44,7 @@ function App() {
     };
 
   return (
-    <>
+    <div class = "comfortaa">
       <div class="border-4 border-cyan-300 shadow-2xl bg-neutral-600  flex flex-row justify-center items-center rounded-r-sm w-[50vw] md:w-1/5 pl-1">
         <div class="w-4/5 flex flex-row">
           <h2 class="mr-3 my-1 text-sm rounded-3xl bg-slate-100 px-1"> S </h2>
@@ -207,7 +207,6 @@ function App() {
               <div class="w-full md:w-1/2 lg:w-full text-slate-100 my-2 h-auto border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-fuchsia-400">Chatbot for Mental Health Awareness</h3>
                 <iframe class="w-full h-auto relative" src={demo} />
-                <h3>MHacks 16</h3>
               </div>
             </div>
           </div>
@@ -266,7 +265,7 @@ function App() {
         </div>
         <h class="text-yellow-400"> Copyright at Shriya </h>
       </div>
-    </>
+    </div>
   );
 }
 
