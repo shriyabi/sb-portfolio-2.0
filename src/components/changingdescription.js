@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import "./components.css"; 
 
 function Description() {
     const titles = ["Tech Enthusiast", "Equity Activist", "Arduino Tinker-er", "Full-Stack Developer", "AI Enthusiast"];
@@ -11,7 +12,7 @@ function Description() {
     }, [titles.length]);
 
     return (
-        <h1 className="text-xl mb-3 text-fuchsia-400">
+        <h1 className="text-xl font-bold mb-3 text-fuchsia-400">
             {titles[Curr]}
         </h1>
     );

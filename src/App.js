@@ -24,7 +24,7 @@ function App() {
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwHtv3OLWznGOme3jug3MFsIyvSb3nXWvWkX329gQelRLoSgfjOg8Lgw_qvm2HYgTM/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkZmNZSpeQN0PwZYWtLcL0GCPsgZTP7uw2CLYcT2XD_zzRL9ihULV9ttbRMwFBtQ/exec';
 
         fetch(scriptURL, {
           method: 'POST',
@@ -47,17 +47,17 @@ function App() {
     <div class = "comfortaa">
       <div class="border-4 border-cyan-300 shadow-2xl bg-neutral-600  flex flex-row justify-center items-center rounded-r-sm w-[50vw] md:w-1/5 pl-1">
         <div class="w-4/5 flex flex-row">
-          <h2 class="mr-3 my-1 text-sm rounded-3xl bg-slate-100 px-1"> S </h2>
-          <h2 class="text-xl text-slate-100 font-semibold">SHROOGLE</h2>
+          <h2 class="mr-3 my-1 text-sm rounded-3xl bg-fuchsia-500 px-1"> S </h2>
+          <h2 class="text-xl text-slate-100 font-black font-bold">SHROOGLE</h2>
         </div>
-        <div class="w-1/5 items-end flex justify-end px-3 font-semibold text-sm">
+        <div class="w-1/5 items-end flex text-yellow-400 justify-end px-3 font-semibold text-sm">
           X
         </div>
 
       </div>
       <div id="Home" class="bg-neutral-800 w-screen min-h-screen px-3 flex-col items-start flex justify-start">
 
-        <div class="rounded-xl my-5 flex flex-row bg-slate-100 shadow-lg pink shadow-fuschia-400 w-full border-4 border-fuchsia-400">
+        <div class="rounded-xl my-5 flex flex-row bg-slate-100 shadow-lg pink shadow-fuschia-400 w-full border-4 border-fuchsia-400 mb-7 lg:mb-10">
           <div class="w-[2em] rounded-l-lg px-2 mr-2 bg-yellow-300 animate__animated animate__heartBeat animate__delay-2s"> &#128269; </div>
           <TypingAnimation class="bg-slate-100"/>
         </div>
@@ -71,7 +71,6 @@ function App() {
               <a href="#Contact" class="ml-5 md:ml-10 lg:mt-8 lg:ml-0 zoom-out bg-slate-100 rounded-xl p-1"> &#x1f4ac; </a>
             </div>
           </div>
-
           <div class="w-full flex flex-col mr-5">
             <h class="text-5xl font-semibold animate__animated animate__delay-4s animate__rubberBand text-cyan-300"> Shriya Biddala </h>
             <Description />
@@ -212,47 +211,51 @@ function App() {
           </div>
         </div>
 
-        <div class="border-2 w-full mb-10" id="Projects"></div>
-        <div id="Contact" class="w-full flex justify-center flex-col items-center">
-          <h2 class='text-center text-xl underline mb-3 text-yellow-400 font-semibold'> CONTACT </h2>
-          <form ref={formRef} onSubmit={handleSubmit} class="px-5 py-7 w-full md:w-4/5 mb-7 border-4 border-slate-100 rounded-lg flex flex-col justify-center flex items-center animated__animate animate__delay-4s animate__fadeIn">
-            <div class="w-full flex flex-col md:flex-row justify-center items-center">
-              <input
+        <div className="border-2 w-full mb-10" id="Projects"></div>
+<div id="Contact" className="w-full flex justify-center flex-col items-center">
+  <h2 className='text-center text-xl underline mb-3 text-yellow-400 font-semibold'>CONTACT</h2>
+  <form ref={formRef} onSubmit={handleSubmit} method='POST' action='https://script.google.com/macros/s/AKfycbzd5Y2yqwt_iO3vhEclGRNI252N2jW-LnxN8bm7zi9lgbcE50RBa_SHqitrbAblwBI/exec' className="px-5 py-7 w-full md:w-4/5 mb-7 border-4 border-slate-100 rounded-lg flex flex-col justify-center items-center animate__animated animate__delay-4s animate__fadeIn">
+    
+    <div className="w-full flex flex-col md:flex-row justify-center items-center">
+      <input
+        type="email"
+        name="Email"
+        placeholder="Email"
+        className="p-1 md:mr-5 md:mb-3 text-neutral-900 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-fuchsia-500 mb-5 pink rounded"
+        required
+      />
 
-                type="text"
-                placeholder="Name"
-                class="p-1 md:mr-5 md:mb-3 text-neutral-900 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-fucshia-500 mb-5 pink rounded"
-                required
-              />
+      <input
+        type="text"
+        name="Name"
+        placeholder="Name"
+        className="p-1 md:ml-5 md:mb-3 text-neutral-900 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-cyan-400 blue mb-5 rounded"
+        required
+      />
+    </div>
 
-              <input
-                type="email"
-                placeholder="Email"
-                class="p-1 md:ml-5 md:mb-3 text-neutral-900 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-cyan-400 blue mb-5 rounded"
-                required
-              />
-            </div>
+    <input
+      type="text"
+      name="Subject"
+      placeholder="Subject"
+      className="p-1 w-full md:mt-8 text-neutral-900 focus:outline-yellow-400 border-2 border-violet-500 purple flex items-start justify-start h-[5em] rounded"
+      required
+    />
 
-            <input
-              type="text"
-              placeholder="Subject"
-              class="p-1 w-full md:mt-8 text-neutral-900 focus:outline-yellow-400 border-2 border-violet-500 purple flex items-start justify-start h-[5em] rounded"
-              required
-            />
+    <button
+      type="submit"
+      className="bg-yellow-400 text-white p-1 mt-10 rounded text-neutral-900 hover:bg-yellow-100"
+    >
+      Submit
+    </button>
 
-            <button
-              type="submit"
-              class="bg-yellow-400 text-white p-1 mt-10 rounded text-neutral-900 hover:bg-yellow-100"
-            >
-              Submit
-            </button>
-            {submissionStatus && (
-                <p className="text-fuchsia-500 mt-4">{submissionStatus}</p>
-            )}
-          </form>
+    {submissionStatus && (
+      <p className="text-fuchsia-500 mt-4">{submissionStatus}</p>
+    )}
+  </form>
+</div>
+</div>
 
-        </div>
-      </div>
  
       <div class="bg-neutral-800 pt-20">
         <div class="w-auto flex flex-row justify-center my-3 items-center">
