@@ -13,9 +13,6 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
         case 'ai':
             imgSrc = ai;
             break;
-        case 'robo':
-            imgSrc = robo;
-            break;
         case 'portfolio':
             imgSrc = portfolio;
             break;
@@ -27,6 +24,16 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
             return <img src={imgSrc} className="mx-auto border-4 border-fuchsia-500" alt={awardName} />;
         }
         switch (imgUrl) {
+            case 'architext':
+                return (
+                    <iframe
+                        src="https://www.youtube.com/embed/HxY2zq5rcqk"
+                        className="mx-auto border-4 w-full h-auto border-fuchsia-500"
+                        title={awardName}
+                        allowFullScreen
+                    ></iframe>
+                );
+                break;
             case 'onevote':
                 return (
                     <iframe

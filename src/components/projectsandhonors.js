@@ -21,7 +21,7 @@ function Modal({ isOpen, onClose, project }) {
 }
 
 function ProjectsAndHonors() {
-    const [activeTab, setActiveTab] = useState('honors');
+    const [activeTab, setActiveTab] = useState('projects');
     const [modalOpen, setModalOpen] = useState(false);
     const [currentProject, setCurrentProject] = useState(null);
 
@@ -68,10 +68,10 @@ function ProjectsAndHonors() {
             imgUrl: "ai"
         },
         {
-            awardName: "RoboPicasso",
-            awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            skills:"Python, OpenCV",
-            imgUrl: "robo"
+            awardName: "ArchiText",
+            awardDescription: "VSCode extension that creates and inserts AI-generated code documentation with the click of one button.",
+            skills:"JavaScript, VSCode API, CodeLens, Python, Llama API",
+            imgUrl: "architext"
         },
         {
             awardName: "BioKnee",

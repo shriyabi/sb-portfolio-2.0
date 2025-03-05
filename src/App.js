@@ -9,7 +9,7 @@ import 'animate.css';
 import shriya from './components/images/shriya-transparent.png'; 
 import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -24,7 +24,7 @@ function App() {
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkZmNZSpeQN0PwZYWtLcL0GCPsgZTP7uw2CLYcT2XD_zzRL9ihULV9ttbRMwFBtQ/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzO-68zD61CnGTH_dpGWCeXvm0TZdo_b2aj_SDds6D8cza-VKd4SLseEJJAnqKPTuc/exec';
 
         fetch(scriptURL, {
           method: 'POST',
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div class = "comfortaa">
-      <div class="border-4 border-cyan-300 shadow-2xl bg-neutral-600  flex flex-row justify-center items-center rounded-r-sm w-[50vw] md:w-1/5 pl-1">
+      <div class="border-4 border-cyan-300 shadow-2xl bg-neutral-600  flex flex-row justify-center items-center rounded-r-md w-[50vw] md:w-1/5 pl-1">
         <div class="w-4/5 flex flex-row">
           <h2 class="mr-3 my-1 text-sm rounded-3xl bg-fuchsia-500 px-1"> S </h2>
           <h2 class="text-xl text-slate-100 font-black font-bold">SHROOGLE</h2>
@@ -87,9 +87,46 @@ function App() {
             <div id="Skills" class="w-full flex flex-col md:flex-row">
               <div class="w-full md:w-1/2 mr-7 flex flex-col">
                 <h class="text-xl underline font-bold text-violet-500"> SKILLS </h>
-                <h class="text-sm mt-3 overline text-fuchsia-500"> Full-Stack Development </h>
+                <h class="text-sm mt-3 overline text-fuchsia-500"> AI/ML/NLP </h>
+                <Skills
+                  skillName="PyTorch"
+                  year="2 YEARS" />
+                <Skills
+                  skillName="Pandas"
+                  year="2 YEARS" />
+                <Skills
+                  skillName="Numpy"
+                  year="2 YEARS" />
+                <Skills
+                  skillName="Transformers"
+                  year="1 YEARS" />
+                <Skills
+                  skillName="NLTK"
+                  year="1 YEARS" />
+                <Skills
+                  skillName="Generative LLMs"
+                  year="2 YEARS" />
+                
+                <h class="text-sm mt-3 overline text-cyan-400"> SWE </h>
+                <Skills
+                  skillName="Python"
+                  year="4 YEARS" />
+                <Skills
+                  skillName="C++"
+                  year="2 YEARS" />
+                <Skills
+                  skillName="C"
+                  year="1 YEAR" />
+                <Skills
+                  skillName="Java"
+                  year="7 YEARS" />
+
+                <h class="text-sm mt-3 overline text-yellow-400"> Full-Stack Development </h>
                 <Skills
                   skillName="ReactJS"
+                  year="1 YEAR" />
+                <Skills
+                  skillName="Django"
                   year="1 YEAR" />
                 <Skills
                   skillName="TailwindCSS"
@@ -113,57 +150,37 @@ function App() {
                   skillName="GraphQL"
                   year="1 YEAR" />
 
-                <h class="text-sm mt-3 overline text-cyan-400"> SWE </h>
-                <Skills
-                  skillName="Python"
-                  year="4 YEARS" />
-                <Skills
-                  skillName="C++"
-                  year="2 YEARS" />
-                <Skills
-                  skillName="C"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="Java"
-                  year="7 YEARS" />
-
-                <h class="text-sm mt-3 overline text-yellow-400"> AI/ML </h>
-                <Skills
-                  skillName="PyTorch"
-                  year="2 YEARS" />
-                <Skills
-                  skillName="Pandas"
-                  year="2 YEARS" />
-                <Skills
-                  skillName="Generative LLMs"
-                  year="2 YEARS" />
               </div>
               <div class="w-full mt-10 md:mt-0 md:w-1/2">
                 <h class='text-xl underline font-bold text-fuchsia-400'> EDUCATION </h>
                 <div class="border-purple-400 border-4 purple rounded-xl p-4 my-4 flex flex-col justify-start text-slate-100">
                   <h class="text-lg font-bold">University of Michigan - Ann Arbor</h>
-                  <h class="text-base font-semibold italic">Junior, Computer Science Engineering and Electrical Engineering</h>
+                  <h class="text-base font-semibold italic">Junior, Computer Science Engineering</h>
                   <div class="flex pt-3 flex-col lg:flex-row">
                     <div class="w-full flex flex-col lg:w-1/2 lg:mr-3">
                       <h class="text-sm underline">Coursework:</h>
                       <h class="text-base leading-4">Data Structures and Algorithms</h>
-                      <h class="leading-3 text-neutral-700">test </h>
-                      <h class="text-base ">Robotics Mechanisms</h>
-                      <h class="leading-3 text-neutral-700">test </h>
-                      <h class="text-base leading-4">Introduction to Computer Architecture</h>
-                      <h class="leading-3 text-neutral-700">test </h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base leading-4">Introduction to Machine Learning</h>
+                      <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base leading-4">Introduction to Artificial Intelligence</h>
-                      <h class="leading-5 text-neutral-700">test </h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base leading-4">Introduction to Natural Language Progessing</h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base leading-4">Introduction to Computer Architecture</h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base leading-4">Data-Driven Web Applications</h>
+                      <h class="leading-5 text-neutral-800">test </h>
                     </div>
                     <div class="w-full flex flex-col lg:w-1/2">
                       <h class="text-sm underline">Activities:</h>
                       <h class="text-base leading-4">Residential Advisor</h>
-                      <h class="leading-3 text-neutral-700">test </h>
+                      <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base leading-4">Instructional Aide for Data Structures and Algorithms</h>
-                      <h class="leading-3 text-neutral-700">test </h>
-                      <h class="text-base leading-4">Instructional Aide for Robotics Mechanisms</h>
-                      <h class="leading-3 text-neutral-700">test </h>
-                      <h class="text-base"> Freelance Full-Stack Developer for For Michigan</h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base"> Freelance Full-Stack Developer </h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base"> YouTuber (Travel) </h>
                     </div>
                   </div>
                 </div>
@@ -178,15 +195,15 @@ function App() {
           <div class="w-full lg:w-1/3 min-h-screen flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight md:mt-20 lg:mt-0">
             <h2 class='items-start text-cyan-300'> LATEST NEWS </h2>
             <div class="flex flex-col md:flex-row lg:flex-col w-full flex-wrap">
+              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-violet-400">ArchiText</h3>
+                <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/HxY2zq5rcqk" />
+                <h3>SpartaHacks</h3>
+              </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-cyan-300">For Michigan Website</h3>
                 <img src={forMich} class=" w-full h-auto"/>
                 <h3></h3>
-              </div>
-              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
-                <h3 class="text-xl overline p-3 text-violet-400">My Portfolio V1</h3>
-                <img src={portfolio} class=" w-full h-auto"/>
-                <h3>More professional Portfolio</h3>
               </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-fuchsia-400">GreenBrother</h3>
@@ -214,14 +231,14 @@ function App() {
         <div className="border-2 w-full mb-10" id="Projects"></div>
 <div id="Contact" className="w-full flex justify-center flex-col items-center">
   <h2 className='text-center text-xl underline mb-3 text-yellow-400 font-semibold'>CONTACT</h2>
-  <form ref={formRef} onSubmit={handleSubmit} method='POST' action='https://script.google.com/macros/s/AKfycbzd5Y2yqwt_iO3vhEclGRNI252N2jW-LnxN8bm7zi9lgbcE50RBa_SHqitrbAblwBI/exec' className="px-5 py-7 w-full md:w-4/5 mb-7 border-4 border-slate-100 rounded-lg flex flex-col justify-center items-center animate__animated animate__delay-4s animate__fadeIn">
+  <form ref={formRef} onSubmit={handleSubmit} method='POST' action='POST' className="px-5 py-7 w-full md:w-4/5 mb-7 border-4 border-slate-100 rounded-lg flex flex-col justify-center items-center animate__animated animate__delay-4s animate__fadeIn">
     
     <div className="w-full flex flex-col md:flex-row justify-center items-center">
       <input
         type="email"
         name="Email"
         placeholder="Email"
-        className="p-1 md:mr-5 md:mb-3 text-neutral-900 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-fuchsia-500 mb-5 pink rounded"
+        className="p-2 md:mr-5 md:mb-3 bg-neutral-800 font-semibold focus:outline-yellow-400 w-full md:w-1/2 border-2 border-fuchsia-500 text-fuchsia-500 mb-5 pink rounded"
         required
       />
 
@@ -229,22 +246,22 @@ function App() {
         type="text"
         name="Name"
         placeholder="Name"
-        className="p-1 md:ml-5 md:mb-3 text-neutral-900 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-cyan-400 blue mb-5 rounded"
+        className="p-2 md:ml-5 font-semibold md:mb-3 bg-neutral-800 text-cyan-400 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-cyan-400 blue mb-5 rounded"
         required
       />
     </div>
 
-    <input
+    <textarea
       type="text"
       name="Subject"
       placeholder="Subject"
-      className="p-1 w-full md:mt-8 text-neutral-900 focus:outline-yellow-400 border-2 border-violet-500 purple flex items-start justify-start h-[5em] rounded"
+      className="p-2 text-wrap w-full bg-neutral-800 font-semibold md:mt-8 text-neutral-900 focus:outline-yellow-400 border-2 border-violet-500 text-violet-500 purple flex items-start justify-start h-[5em] rounded"
       required
     />
 
     <button
       type="submit"
-      className="bg-yellow-400 text-white p-1 mt-10 rounded text-neutral-900 hover:bg-yellow-100"
+      className="bg-yellow-400 font-bold text-neutral-950 p-1 mt-10 rounded text-neutral-900 hover:bg-yellow-100"
     >
       Submit
     </button>
@@ -260,10 +277,11 @@ function App() {
       <div class="bg-neutral-800 pt-20">
         <div class="w-auto flex flex-row justify-center my-3 items-center">
           <div class="w-auto md:px-7 border-4 flex flex-row justify-center my-3 py-5 rounded-xl items-center">
+          <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-fuchsia-400 border-4 flex items-center justify-center bounce"> <a href="https://www.youtube.com/channel/UCF1wX0AqAWlqtwaSraqN6kA"> <FontAwesomeIcon icon={faYoutube} class="fa-2x" style={{ color: '#FF0000', height: '1em'}} /> </a></div>
           <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-cyan-400 border-4 flex items-center justify-center bounce"> <a href="https://www.instagram.com/shriya_bi/"> <FontAwesomeIcon icon={faInstagram} class="fa-2x" style={{ color: '#d946ef', height: '1em'}} /> </a></div>
           <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce"> <a href="https://www.linkedin.com/in/shriya-biddala/"> <FontAwesomeIcon icon={faLinkedin} class="fa-2x" style={{ color: '#0284c7', height: '1em'}} /> </a></div>
-          <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-yellow-400 border-4 flex items-center justify-center bounce"> <a href="https://github.com/shriyabi"> <FontAwesomeIcon icon={faGithub} class="fa-2x" style={{ color: '#f9fafb', height: '1em'}} /> </a></div>
-          <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-fuchsia-400 border-4 flex items-center justify-center bounce"> <a href="mailto:shriyarbiddala@gmail.com"> <FontAwesomeIcon icon={faEnvelope} class="fa-2x" style={{ color: '#ffffff', height: '1em'}} /> </a></div>
+          <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-yellow-400 border-4 flex items-center justify-center bounce"> <a href="https://github.com/shriyabi"> <FontAwesomeIcon icon={faGithub} class="fa-2x" style={{ color: '#987cbf', height: '1em'}} /> </a></div>
+          <div class="icons w-[3em] h-[3em] mx-4 rounded-3xl border-fuchsia-400 border-4 flex items-center justify-center bounce"> <a href="mailto:shriyarbiddala@gmail.com"> <FontAwesomeIcon icon={faEnvelope} class="fa-2x" style={{ color: '#e8e8e8', height: '1em'}} /> </a></div>
         </div>
         </div>
         <h class="text-yellow-400"> Copyright at Shriya </h>
