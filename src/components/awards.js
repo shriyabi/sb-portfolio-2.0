@@ -3,6 +3,7 @@ import ai from './images/aihandwritingmodel.png';
 import robo from './images/EdgeDetection.webp';
 import portfolio from './images/My Projects.png';
 import demo from './images/Demostration.webm';
+import planner from './images/Planner.png'
 
 function Award({ awardName, awardDescription, skills, imgUrl }) {
     let imgSrc;
@@ -16,6 +17,8 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
         case 'portfolio':
             imgSrc = portfolio;
             break;
+        case 'planner':
+            imgSrc = planner;
         default:
             imgSrc = null;
     }
@@ -64,20 +67,20 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
                     ></iframe>
                 );
                 break;
-            case 'bio':
+            case 'planner':
                 return (
-                    <iframe
-                        src="https://www.youtube.com/embed/AcX9qemFgyg"
+                    <img
+                        src={planner}
                         className="mx-auto border-4 w-full h-auto border-fuchsia-500"
                         title={awardName}
                         allowFullScreen
-                    ></iframe>
+                    ></img>
                 );
-                break;
+                break; 
             case 'demo':
                 return (
                     <iframe
-                        src={demo}
+                        src="https://www.youtube.com/embed/Afk6gSBdXUg"
                         className="mx-auto border-4 w-full h-auto border-fuchsia-500"
                         title={awardName}
                         allowFullScreen

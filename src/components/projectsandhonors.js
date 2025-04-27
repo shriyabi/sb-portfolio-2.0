@@ -51,19 +51,19 @@ function ProjectsAndHonors() {
         },
         {
             awardName: "DocuDog",
-            awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
+            awardDescription: "Web application with generative artifical intelligence to help people to get summaries of particular features of important documents.",
             skills:"Python, Gemini 1.5 Pro API, LLM Prompt Engineering",
             imgUrl: "docudog"
         },
         {
             awardName: "Chatbot for Mental Health Awareness",
-            awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            skills:"PyTorch, Python, Kaggle, Pandas, Google Cloud, Google Search API",
+            awardDescription: "A chatbot utilizing generative AI and Google Search API to provide responses and resources to mental health questions.",
+            skills:"PyTorch, Python, Kaggle, Pandas, Google Cloud, Google Search API, RNNs",
             imgUrl: "demo"
         },
         {
             awardName: "A.I. Handwriting Transformer Model",
-            awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
+            awardDescription: "An application with a visually-appleasing user interface with an integrated model developed using OpenCV and PyTorch to detect handwritten components and convert into a .txt file.",
             skills:"OpenCV, PyTorch, HTML/CSS/JS, Express.js",
             imgUrl: "ai"
         },
@@ -74,10 +74,10 @@ function ProjectsAndHonors() {
             imgUrl: "architext"
         },
         {
-            awardName: "BioKnee",
-            awardDescription: "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
-            skills:"Electrical Circuits, Python, Programming",
-            imgUrl: "bio"
+            awardName: "Planner.io",
+            awardDescription: "A website to plan out the week with a task checklist, integrated timer, ability to catagorize tasks based on time priority, and the feature to change themes.",
+            skills:"React.js, TailwindCSS, Node.js",
+            imgUrl: "planner"
         },
         
     ];

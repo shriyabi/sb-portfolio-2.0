@@ -101,7 +101,7 @@ function App() {
                   skillName="Transformers"
                   year="1 YEARS" />
                 <Skills
-                  skillName="NLTK"
+                  skillName="NLTK/BERT"
                   year="1 YEARS" />
                 <Skills
                   skillName="Generative LLMs"
@@ -174,6 +174,8 @@ function App() {
                     </div>
                     <div class="w-full flex flex-col lg:w-1/2">
                       <h class="text-sm underline">Activities:</h>
+                      {/* <h class="text-base leading-4 text-green-300">Incoming SWE Intern @ Walmart Global Tech </h> */}
+                      <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base leading-4">Residential Advisor</h>
                       <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base leading-4">Instructional Aide for Data Structures and Algorithms</h>
@@ -211,9 +213,9 @@ function App() {
                 <h3>MHacks 17</h3>
               </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400  yellow p-3 border-4 align-end rounded-xl">
-                <h3 class="text-xl overline p-3 text-cyan-400">DocuDog</h3>
-                <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/Qq7_72aoV08" />
-                <h3>Google x MHacks</h3>
+                <h3 class="text-xl overline p-3 text-cyan-400">Planner.io</h3>
+                <iframe class="w-full h-auto relative" src="https://shriyabi.github.io/Planner.io/" />
+                <h3>Feel free to play around with it above (it is an iframe) </h3>
               </div>
               <div class="w-full md:w-1/2 lg:w-full text-slate-100 my-2 h-auto border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-violet-400">OneVote</h3>
