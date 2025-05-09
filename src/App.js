@@ -183,6 +183,8 @@ function App() {
                       <h class="text-base"> Freelance Full-Stack Developer </h>
                       <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base"> YouTuber (Travel) </h>
+                      <h class="leading-3 text-neutral-800">test </h>
+                      <h class="text-base leading-4 text-emerald-300"> Incoming AI/ML Intern at Walmart Global Tech </h>
                     </div>
                   </div>
                 </div>
