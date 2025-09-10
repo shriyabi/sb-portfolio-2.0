@@ -16,6 +16,10 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import forMich from './components/images/ForMichigan.png'; 
 import portfolio from './components/images/My Projects.png'; 
 import demo from './components/images/Demostration.webm';
+import plannerIo from './components/images/plannerIo.png'; 
+import medChatbot from './components/images/medChatbot.png'; 
+import docuDog from './components/images/docuDog.png'; 
+import deadlineTracker from './components/images/deadlineTracker.png'; 
 
 function App() {
   //form
@@ -80,7 +84,7 @@ function App() {
                   <h class="text-xl mb-5 md:mb-0 md:text-2xl text-slate-100 font-semibold"> Hello! Hola! Namaste! </h>
               </div>
               <div class="w-full mt-5 md:mt-0 md:text-lg md:w-1/2 md:mx-3 mb-10 rounded-lg flex text-end justify-center border-4 blue border-cyan-400 text-slate-100 font-semibold h-auto p-3">
-              Hello! I am a Computer Science enthusiast at the University of Michigan's College of Engineering and a freelance full-stack developer, having built websites for organizations like For Michigan and other clients. I have also contributed to several machine learning research projects, including developing a mental health chatbot. My passions lie in artificial intelligence, automation, and creating innovative web applications by blending creativity with technology. As an advocate for equity and diversity in tech, I aim to merge my technical and activist efforts to build equitable AI-driven solutions for under-resourced communities and develop web applications that have a positive social and business impact.</div>
+              Hello! I am a Computer Science enthusiast at the University of Michigan's College of Engineering and a freelance full-stack developer, having built websites for organizations like For Michigan and other clients. I have also contributed to several machine learning research projects, including developing a mental health chatbot and a chatbot for medical condition awareness, in addition to my work at Walmart Global Tech. My passions lie in artificial intelligence, automation, and creating innovative web applications by blending creativity with technology and AI. As an advocate for equity and diversity in tech, I aim to merge my technical and activist efforts to build equitable AI-driven solutions for under-resourced communities and develop web applications that have a positive social and business impact.</div>
             </div>
             <div class="border-2 mr-5 my-4"></div>
 
@@ -90,22 +94,31 @@ function App() {
                 <h class="text-sm mt-3 overline text-fuchsia-500"> AI/ML/NLP </h>
                 <Skills
                   skillName="PyTorch"
-                  year="2 YEARS" />
+                  year="3 YEARS" />
+                <Skills
+                  skillName="HuggingFace's Transformers Lib."
+                  year="3 YEARS" />
                 <Skills
                   skillName="Pandas"
-                  year="2 YEARS" />
+                  year="3 YEARS" />
                 <Skills
                   skillName="Numpy"
-                  year="2 YEARS" />
-                <Skills
-                  skillName="Transformers"
-                  year="1 YEARS" />
-                <Skills
-                  skillName="NLTK/BERT"
-                  year="1 YEARS" />
+                  year="3 YEARS" />
                 <Skills
                   skillName="Generative LLMs"
                   year="2 YEARS" />
+                 <Skills
+                  skillName="NLTK/BERT"
+                  year="1 YEARS" />
+                <Skills
+                  skillName="Azure Open AI"
+                  year="< 1 YEAR" />
+                <Skills
+                  skillName="LangGraph + LangChain"
+                  year="< 1 YEAR" />
+                <Skills
+                  skillName="Vector Embedding"
+                  year="< 1 YEAR" />
                 
                 <h class="text-sm mt-3 overline text-cyan-400"> SWE </h>
                 <Skills
@@ -155,7 +168,7 @@ function App() {
                 <h class='text-xl underline font-bold text-fuchsia-400'> EDUCATION </h>
                 <div class="border-purple-400 border-4 purple rounded-xl p-4 my-4 flex flex-col justify-start text-slate-100">
                   <h class="text-lg font-bold">University of Michigan - Ann Arbor</h>
-                  <h class="text-base font-semibold italic">Junior, Computer Science Engineering</h>
+                  <h class="text-base font-semibold italic">Senior, Computer Science Engineering</h>
                   <div class="flex pt-3 flex-col lg:flex-row">
                     <div class="w-full flex flex-col lg:w-1/2 lg:mr-3">
                       <h class="text-sm underline">Coursework:</h>
@@ -171,6 +184,8 @@ function App() {
                       <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base leading-4">Data-Driven Web Applications</h>
                       <h class="leading-5 text-neutral-800">test </h>
+                      <h class="text-base leading-4">Introduction to Operating Systems</h>
+                      <h class="leading-5 text-neutral-800">test </h>
                     </div>
                     <div class="w-full flex flex-col lg:w-1/2">
                       <h class="text-sm underline">Activities:</h>
@@ -184,7 +199,7 @@ function App() {
                       <h class="leading-3 text-neutral-800">test </h>
                       <h class="text-base"> YouTuber (Travel) </h>
                       <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4 text-emerald-300"> Incoming AI/ML Intern at Walmart Global Tech </h>
+                      <h class="text-base leading-4 text-emerald-300"> Previous AI/ML Intern at Walmart Global Tech </h>
                     </div>
                   </div>
                 </div>
@@ -197,36 +212,47 @@ function App() {
           </div>
           <div class="border-2 mr-5 my-8" id="Projects"></div>
           <div class="w-full lg:w-1/3 min-h-screen flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight md:mt-20 lg:mt-0">
-            <h2 class='items-start text-cyan-300'> LATEST NEWS </h2>
+            <h2 class='items-start text-cyan-300'> FEATURED NEWS </h2>
             <div class="flex flex-col md:flex-row lg:flex-col w-full flex-wrap">
-              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+              {/* <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-violet-400">ArchiText</h3>
                 <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/HxY2zq5rcqk" />
                 <h3>SpartaHacks</h3>
-              </div>
-              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
-                <h3 class="text-xl overline p-3 text-cyan-300">For Michigan Website</h3>
-                <img src={forMich} class=" w-full h-auto"/>
-                <h3></h3>
+              </div> */}
+              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-violet-400">Deadline Tracker</h3>
+                <img src={deadlineTracker} class=" w-full h-auto"/>
+                <h3> Personal Project </h3>
               </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-cyan-400">Planner.io</h3>
+                <img src={plannerIo} class=" w-full h-auto"/>
+                <h3> Personal Project </h3>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-fuchsia-400">Chatbot for Medical Condition Awareness</h3>
+                <img src={medChatbot} class=" w-full h-auto"/>
+                <h3> Class Project </h3>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-violet-300">For Michigan Website</h3>
+                <img src={forMich} class=" w-full h-auto"/>
+                <h3>Official Website for For Michigan</h3>
+              </div>
+              {/* <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-fuchsia-400">GreenBrother</h3>
                 <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/BbTT9nJbXnE" />
                 <h3>MHacks 17</h3>
-              </div>
-              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400  yellow p-3 border-4 align-end rounded-xl">
-                <h3 class="text-xl overline p-3 text-cyan-400">Planner.io</h3>
-                <iframe class="w-full h-auto relative" src="https://shriyabi.github.io/Planner.io/" />
-                <h3>Feel free to play around with it above (it is an iframe) </h3>
-              </div>
-              <div class="w-full md:w-1/2 lg:w-full text-slate-100 my-2 h-auto border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
+              </div> */}
+              {/* <div class="w-full md:w-1/2 lg:w-full text-slate-100 my-2 h-auto border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-violet-400">OneVote</h3>
                 <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/-eGkraEZ6HA" />
                 <h3>MHacks 16</h3>
-              </div>
+              </div> */}
               <div class="w-full md:w-1/2 lg:w-full text-slate-100 my-2 h-auto border-yellow-400 yellow p-3 border-4 align-end rounded-xl">
-                <h3 class="text-xl overline p-3 text-fuchsia-400">Chatbot for Mental Health Awareness</h3>
+                <h3 class="text-xl overline p-3 text-cyan-400">Chatbot for Mental Health Awareness</h3>
                 <iframe class="w-full h-auto relative" src={demo} />
+                <h3>Research Project @ CU Boulder </h3>
               </div>
             </div>
           </div>

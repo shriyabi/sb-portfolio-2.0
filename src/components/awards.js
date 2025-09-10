@@ -3,7 +3,15 @@ import ai from './images/aihandwritingmodel.png';
 import robo from './images/EdgeDetection.webp';
 import portfolio from './images/My Projects.png';
 import demo from './images/Demostration.webm';
-import planner from './images/Planner.png'
+import planner from './images/Demostration.webm';
+import oneVote from './images/oneVote.png';
+import greenBro from './images/greenBrother.png'; 
+import plannerIo from './images/plannerIo.png'; 
+import medChatbot from './images/medChatbot.png'; 
+import docuDog from './images/docuDog.png'; 
+import deadlineTracker from './images/deadlineTracker.png'; 
+import architext from './images/architext.png'; 
+import chatBot from './images/chatBot.png';
 
 function Award({ awardName, awardDescription, skills, imgUrl }) {
     let imgSrc;
@@ -11,6 +19,9 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
         case 'forMich':
             imgSrc = forMich;
             break;
+        case 'robo':
+            imgSrc = robo; 
+            break; 
         case 'ai':
             imgSrc = ai;
             break;
@@ -19,6 +30,31 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
             break;
         case 'planner':
             imgSrc = planner;
+            break; 
+        case 'oneVote':
+            imgSrc = oneVote; 
+            break;
+        case 'greenBrother':
+            imgSrc = greenBro; 
+            break;  
+        case 'architext':
+            imgSrc = architext;
+            break; 
+        case 'chatBot':
+            imgSrc = chatBot; 
+            break; 
+        case 'deadline':
+            imgSrc = deadlineTracker; 
+            break; 
+        case 'docuDog':
+            imgSrc = docuDog; 
+            break; 
+        case 'medChatbot':
+            imgSrc = medChatbot; 
+            break; 
+        case 'plannerIo':
+            imgSrc = plannerIo; 
+            break; 
         default:
             imgSrc = null;
     }
@@ -37,14 +73,14 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
                     ></iframe>
                 );
                 break;
-            case 'onevote':
+            case 'oneVote':
                 return (
-                    <iframe
+                     <iframe
                         src="https://www.youtube.com/embed/-eGkraEZ6HA"
                         className="mx-auto border-4 w-full h-auto border-fuchsia-500"
-                        title={awardName}
+                       title={awardName}
                         allowFullScreen
-                    ></iframe>
+                     ></iframe>
                 );
                 break;
             case 'greenbro':
