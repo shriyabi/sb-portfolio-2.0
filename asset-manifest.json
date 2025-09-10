@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.440dc6bd.css",
-    "main.js": "/static/js/main.baa4ad3c.js",
+    "main.css": "/static/css/main.24375cb5.css",
+    "main.js": "/static/js/main.b38e4d78.js",
     "static/js/453.97187523.chunk.js": "/static/js/453.97187523.chunk.js",
     "static/media/Demostration.webm": "/static/media/Demostration.26cf1074b66a539896d6.webm",
-    "static/media/Planner.png": "/static/media/Planner.34b54005a72f8482956b.png",
+    "static/media/oneVote.png": "/static/media/oneVote.d6d54fb65d4555ec831b.png",
     "static/media/aihandwritingmodel.png": "/static/media/aihandwritingmodel.baa8418805662d629439.png",
     "static/media/ForMichigan.png": "/static/media/ForMichigan.8435a94a5c99e7716908.png",
+    "static/media/deadlineTracker.png": "/static/media/deadlineTracker.961996af2612df70bf85.png",
+    "static/media/medChatbot.png": "/static/media/medChatbot.ca8b964d7a1bcb4f4f4e.png",
+    "static/media/architext.png": "/static/media/architext.be28d7396fe77b15a2ca.png",
     "static/media/shriya-transparent.png": "/static/media/shriya-transparent.64b5a5a411fe3a636bf9.png",
+    "static/media/plannerIo.png": "/static/media/plannerIo.dcb019b3a4e853531e11.png",
+    "static/media/greenBrother.png": "/static/media/greenBrother.6a24a077d01b2ddaf6be.png",
+    "static/media/docuDog.png": "/static/media/docuDog.c973b26bde18a17d74d3.png",
+    "static/media/chatBot.png": "/static/media/chatBot.24e76402bea6efdd7fa5.png",
     "static/media/My Projects.png": "/static/media/My Projects.1cecaf85642bb2e8af72.png",
     "static/media/EdgeDetection.webp": "/static/media/EdgeDetection.5e6775af49411dccb8a5.webp",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.440dc6bd.css.map": "/static/css/main.440dc6bd.css.map",
-    "main.baa4ad3c.js.map": "/static/js/main.baa4ad3c.js.map",
+    "main.24375cb5.css.map": "/static/css/main.24375cb5.css.map",
+    "main.b38e4d78.js.map": "/static/js/main.b38e4d78.js.map",
     "453.97187523.chunk.js.map": "/static/js/453.97187523.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.440dc6bd.css",
-    "static/js/main.baa4ad3c.js"
+    "static/css/main.24375cb5.css",
+    "static/js/main.b38e4d78.js"
   ]
 }
