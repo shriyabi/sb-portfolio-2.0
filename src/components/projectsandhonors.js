@@ -75,7 +75,7 @@ function ProjectsAndHonors() {
         "PyTorch, Python, Kaggle, Pandas, Google Cloud, Google Search API, RNNs",
       imgUrl: "demo",
       imgUrlforProj: chatBot,
-      youtube: "https://www.youtube.com/watch?v=Afk6gSBdXUg&t=1s"
+      youtube: "https://www.youtube.com/watch?v=Afk6gSBdXUg"
     },
     {
       awardName: "A.I. Handwriting Transformer Model",
