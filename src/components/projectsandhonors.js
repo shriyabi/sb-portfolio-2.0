@@ -32,6 +32,7 @@ function ProjectsAndHonors() {
       imgUrl: "forMich",
       imgUrlforProj: forMich,
       videoUrl: "",
+      website:"",
       github: "https://github.com/shriyabi/for_michigan_website",
       youtube: "",
     },

@@ -268,7 +268,7 @@ function App() {
         type="email"
         name="Email"
         placeholder="Email"
-        className="p-2 md:mr-5 md:mb-3 bg-neutral-800 font-semibold focus:outline-yellow-400 w-full md:w-1/2 border-2 border-fuchsia-500 text-fuchsia-500 mb-5 pink rounded"
+        className="p-2 md:mr-5 md:mb-3 bg-neutral-800 font-semibold focus:outline-yellow-400 w-full md:w-1/2 border-2 border-fuchsia-500 text-fuchsia-300 mb-5 pink rounded"
         required
       />
 
@@ -276,7 +276,7 @@ function App() {
         type="text"
         name="Name"
         placeholder="Name"
-        className="p-2 md:ml-5 font-semibold md:mb-3 bg-neutral-800 text-cyan-400 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-cyan-400 blue mb-5 rounded"
+        className="p-2 md:ml-5 font-semibold md:mb-3 bg-neutral-800 text-cyan-300 focus:outline-yellow-400 w-full md:w-1/2 border-2 border-cyan-400 blue mb-5 rounded"
         required
       />
     </div>
@@ -285,7 +285,7 @@ function App() {
       type="text"
       name="Subject"
       placeholder="Subject"
-      className="p-2 text-wrap w-full bg-neutral-800 font-semibold md:mt-8 text-neutral-900 focus:outline-yellow-400 border-2 border-violet-500 text-violet-500 purple flex items-start justify-start h-[5em] rounded"
+      className="p-2 text-wrap w-full bg-neutral-800 font-semibold md:mt-8 text-neutral-900 focus:outline-yellow-400 border-2 border-violet-500 text-violet-300 purple flex items-start justify-start h-[5em] rounded"
       required
     />
 
@@ -297,7 +297,7 @@ function App() {
     </button>
 
     {submissionStatus && (
-      <p className="text-fuchsia-500 mt-4">{submissionStatus}</p>
+      <p className="text-fuchsia-300 mt-4">{submissionStatus}</p>
     )}
   </form>
 </div>
