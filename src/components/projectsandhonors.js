@@ -10,13 +10,14 @@ import portfolio from './images/My Projects.png';
 import demo from './images/Demostration.webm';
 import planner from './images/Demostration.webm';
 import oneVote from './images/oneVote.png';
-import greenBro from './images/greenBrother.png'; 
-import plannerIo from './images/plannerIo.png'; 
-import medChatbot from './images/medChatbot.png'; 
-import docuDog from './images/docuDog.png'; 
-import deadlineTracker from './images/deadlineTracker.png'; 
-import architext from './images/architext.png'; 
+import greenBro from './images/greenBrother.png';
+import plannerIo from './images/plannerIo.png';
+import medChatbot from './images/medChatbot.png';
+import docuDog from './images/docuDog.png';
+import deadlineTracker from './images/deadlineTracker.png';
+import architext from './images/architext.png';
 import chatBot from './images/chatBot.png';
+import ar from './images/convosenses.png';
 
 function ProjectsAndHonors() {
   const [activeTab, setActiveTab] = useState("projects");
@@ -32,14 +33,14 @@ function ProjectsAndHonors() {
       imgUrl: "forMich",
       imgUrlforProj: forMich,
       videoUrl: "",
-      website:"",
+      website: "",
       github: "https://github.com/shriyabi/for_michigan_website",
       youtube: "",
     },
     {
-      awardName: "OneVote",
-      awardDescription:
-        "Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.",
+      awardName: "🏆 OneVote",
+      awardDescription: `Web application for local elections awareness with a conversational agent answering questions and guiding users to polling stations, offering details on ongoing elections, and providing access to candidate websites.  \
+    🏆 Best Hack for Social Impact (presented by optiMize): 3rd Place`,
       skills: "HTML/CSS, GPT-4 API, TF-IDF",
       imgUrl: "oneVote",
       imgUrlforProj: oneVote,
@@ -94,7 +95,7 @@ function ProjectsAndHonors() {
       imgUrl: "architext",
       imgUrlforProj: architext,
       github: "https://github.com/shriyabi/SparthackX",
-      devpost: "https://devpost.com/software/architext", 
+      devpost: "https://devpost.com/software/architext",
       youtube: "https://www.youtube.com/watch?v=HxY2zq5rcqk&t=1s"
     },
     {
@@ -107,29 +108,60 @@ function ProjectsAndHonors() {
       github: "https://github.com/shriyabi/Planner.io"
     },
     {
-        awardName: "Deadline Tracker",
-        awardDescription: "Track deadlines", 
-        skills: "React.js, TailwindCSS, Node.js, Gemma, Google Calendar API, Gogle OAuth, Named Entity Recognition, FastAPI",
-        imgUrl: "deadline",
-        imgUrlforProj: deadlineTracker,
-        github: "https://github.com/shriyabi/deadline_tracker"
-      },
-      {
-        awardName: "Chatbot for Medical Condition Awareness",
-        awardDescription: "Chatbot to accept symptoms and questions about medican conditions and recieve more information.",
-        skills: "BioBERT, PyTorch, Fine-tuning keyword extraction, Attention",
-        imgUrl: "medChatbot",
-        imgUrlforProj: medChatbot,
-      },
-      {
-        awardName: "RoboPicasso",
-        awardDescription:"OpenCV + Canary Line detection to detect edges of any given object in view for the robot to trace.",
-        skills: "OpenCV",
-        imgUrl: "robo",
-        imgUrlforProj: robo,
-        github: "https://github.com/ElemelonWind/robo-picasso"
-      },
+      awardName: "Deadline Tracker",
+      awardDescription: "Track deadlines",
+      skills: "React.js, TailwindCSS, Node.js, Gemma, Google Calendar API, Gogle OAuth, Named Entity Recognition, FastAPI",
+      imgUrl: "deadline",
+      imgUrlforProj: deadlineTracker,
+      github: "https://github.com/shriyabi/deadline_tracker"
+    },
+    {
+      awardName: "Chatbot for Medical Condition Awareness",
+      awardDescription: "Chatbot to accept symptoms and questions about medican conditions and recieve more information.",
+      skills: "BioBERT, PyTorch, Fine-tuning keyword extraction, Attention",
+      imgUrl: "medChatbot",
+      imgUrlforProj: medChatbot,
+    },
+    {
+      awardName: "RoboPicasso",
+      awardDescription: "OpenCV + Canary Line detection to detect edges of any given object in view for the robot to trace.",
+      skills: "OpenCV",
+      imgUrl: "robo",
+      imgUrlforProj: robo,
+      github: "https://github.com/ElemelonWind/robo-picasso"
+    },
+    {
+
+      awardName: "🏆 ConvoSenses",
+      awardDescription: "AR Intelligent Public Speaking Coach with a user-dashboard that displays real-time feedback and evaluation from the agentic workflow of LLM-as-judge agents. \n 🏆 Best Use of Snapr AR (presented by Snapchat): 2nd Place",
+      skills: "LangChain, Gemini API, ReactJS",
+      imgUrl: "ar",
+      imgUrlforProj: ar,
+      github: "https://github.com/MatchaOnMuffins/MHacks25",
+      youtube: "https://www.youtube.com/watch?v=YTZotjnA4ok&t=58s",
+      devpost: "https://devpost.com/software/conversenses?ref_content=my-projects-tab&ref_feature=my_projects"
+    },
   ];
+
+  // Separate project categories
+  const hackathonProjects = [
+    projects.find(p => p.awardName === "🏆 OneVote"),
+    projects.find(p => p.awardName === "GreenBrother"),
+    projects.find(p => p.awardName === "DocuDog"),
+    projects.find(p => p.awardName === "ArchiText"),
+    projects.find(p => p.awardName === "🏆 ConvoSenses"),
+  ];
+
+  const clientProjects = [
+    projects.find(p => p.awardName === "For Michigan Website"),
+    projects.find(p => p.awardName === "Chatbot for Mental Health Awareness"),
+    projects.find(p => p.awardName === "A.I. Handwriting Transformer Model")
+  ];
+
+  const personalProjects = projects.filter(
+    p => !hackathonProjects.includes(p) && !clientProjects.includes(p)
+  );
+
 
   return (
     <div className="w-full mb-7">
@@ -140,20 +172,18 @@ function ProjectsAndHonors() {
             setActiveTab("projects");
             setExpandedProject(null);
           }}
-          className={`py-2 px-1 hover:bg-cyan-100 text-neutral-700 text-xl cursor-pointer ${
-            activeTab === "projects" ? "bg-yellow-400" : "bg-cyan-400"
-          }`}
+          className={`py-2 px-1 hover:bg-cyan-100 text-neutral-700 text-xl cursor-pointer ${activeTab === "projects" ? "bg-yellow-400" : "bg-cyan-400"
+            }`}
         >
-          PAST PROJECTS
+          PROJECTS
         </h3>
         <h3
           onClick={() => {
             setActiveTab("honors");
             setExpandedProject(null);
           }}
-          className={`py-2 px-1 ml-1 hover:bg-cyan-100 text-neutral-700 text-xl cursor-pointer ${
-            activeTab === "honors" ? "bg-yellow-400" : "bg-cyan-400"
-          }`}
+          className={`py-2 px-1 ml-1 hover:bg-cyan-100 text-neutral-700 text-xl cursor-pointer ${activeTab === "honors" ? "bg-yellow-400" : "bg-cyan-400"
+            }`}
         >
           HONORS
         </h3>
@@ -188,104 +218,172 @@ function ProjectsAndHonors() {
               imgUrl=""
             />
           </>
-) : expandedProject !== null ? (
-    <div className="w-full flex flex-col md:flex-row bg-fuchsia-50 rounded-b-md shadow-md">
-      {/* Left side: video/image */}
-      {(projects[expandedProject].videoUrl || projects[expandedProject].youtube || projects[expandedProject].imgUrlforProj) && (
-        <div className="w-full p-4 bg-violet-500 md:w-1/2 flex items-center justify-center rounded-bl-md">
-          {projects[expandedProject].videoUrl ? (
-            <video controls className="w-full h-full object-cover rounded-md">
-              <source src={projects[expandedProject].videoUrl} type="video/mp4" />
-            </video>
-          ) : projects[expandedProject].youtube ? (
-            <iframe
-              className="w-full h-full rounded-md"
-              src={projects[expandedProject].youtube.replace("watch?v=", "embed/")}
-              title={projects[expandedProject].awardName}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          ) : projects[expandedProject].imgUrlforProj ? (
-            <img
-              src={projects[expandedProject].imgUrlforProj}
-              alt={projects[expandedProject].awardName}
-              className="w-full h-full object-cover rounded-md"
-            />
-          ) : null}
-        </div>
-      )}
-  
-      {/* Right side: text + buttons */}
-      <div className={`w-full ${projects[expandedProject].videoUrl || projects[expandedProject].imgUrlforProj ? 'md:w-1/2' : ''} p-6 flex flex-col justify-between`}>
-        <div>
-          <h2 className="text-2xl text-cyan-500 font-bold mb-2">
-            {projects[expandedProject].awardName}
-          </h2>
-          <p>{projects[expandedProject].awardDescription}</p>
-          <p className="italic font-semibold text-sm text-fuchsia-500 pt-3">
-            SKILLS: {projects[expandedProject].skills}
-          </p>
-        </div>
-  
-        <div className="flex justify-between items-center mt-6">
-          <button
-            onClick={() => setExpandedProject(null)}
-            className="bg-yellow-400 hover:bg-yellow-600 hover:text-fuchsia-50 hover:font-bold text-neutral-700 px-4 py-2 rounded"
-          >
-            Close
-          </button>
-  
-          {/* Icons */}
-          <div className="flex space-x-4">
-            {projects[expandedProject].github && (
-              <a href={projects[expandedProject].github} target="_blank" rel="noopener noreferrer">
-                <div className="icons w-[2.25em] h-[2.25em] rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce">
-                  <FontAwesomeIcon icon={faGithub} className="fa-lg" style={{ color: '#987cbf', height: '1em'}} />
-                </div>
-              </a>
-            )}
-  
-            {projects[expandedProject].youtube && (
-              <a href={projects[expandedProject].youtube} target="_blank" rel="noopener noreferrer">
-                <div className="icons w-[2.25em] h-[2.25em] rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce">
-                  <FontAwesomeIcon icon={faYoutube} className="fa-lg" style={{ color: '#FF0000', height: '1em'}} />
-                </div>
-              </a>
-            )}
-  
-            {projects[expandedProject].devpost && (
-              <a href={projects[expandedProject].devpost} target="_blank" rel="noopener noreferrer">
-                <div className="icons w-[2.25em] h-[2.25em] rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.002 1.61L0 12.004L6.002 22.39h11.996L24 12.004L17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853z"/>
-                  </svg>
-                </div>
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  ) : (
-  
-          // PROJECTS grid
-          <div className="flex flex-wrap justify-start">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
-                style={{ minHeight: "300px" }}
-              >
-                <Award awardName={project.awardName} imgUrl={project.imgUrl} />
-                <button
-                  onClick={() => setExpandedProject(index)}
-                  className="mt-2 text-violet-500 underline"
-                >
-                  Read More
-                </button>
+        ) : expandedProject !== null ? (
+          <div className="w-full flex flex-col md:flex-row bg-fuchsia-50 rounded-b-md shadow-md">
+            {/* Left side: video/image */}
+            {(projects[expandedProject].videoUrl || projects[expandedProject].youtube || projects[expandedProject].imgUrlforProj) && (
+              <div className="w-full p-4 bg-violet-500 md:w-1/2 flex items-center justify-center rounded-bl-md">
+                {projects[expandedProject].videoUrl ? (
+                  <video controls className="w-full h-full object-cover rounded-md">
+                    <source src={projects[expandedProject].videoUrl} type="video/mp4" />
+                  </video>
+                ) : projects[expandedProject].youtube ? (
+                  <iframe
+                    className="w-full h-full rounded-md"
+                    src={projects[expandedProject].youtube.replace("watch?v=", "embed/")}
+                    title={projects[expandedProject].awardName}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                ) : projects[expandedProject].imgUrlforProj ? (
+                  <img
+                    src={projects[expandedProject].imgUrlforProj}
+                    alt={projects[expandedProject].awardName}
+                    className="w-full h-full object-cover rounded-md"
+                  />
+                ) : null}
               </div>
-            ))}
+            )}
+
+            {/* Right side: text + buttons */}
+            <div className={`w-full ${projects[expandedProject].videoUrl || projects[expandedProject].imgUrlforProj ? 'md:w-1/2' : ''} p-6 flex flex-col justify-between`}>
+              <div>
+                <h2 className="text-2xl text-cyan-500 font-bold mb-2">
+                  {projects[expandedProject].awardName}
+                </h2>
+                <p>{projects[expandedProject].awardDescription}</p>
+                <p className="italic font-semibold text-sm text-fuchsia-500 pt-3">
+                  SKILLS: {projects[expandedProject].skills}
+                </p>
+              </div>
+
+              <div className="flex justify-between items-center mt-6">
+                <button
+                  onClick={() => setExpandedProject(null)}
+                  className="bg-yellow-400 hover:bg-yellow-600 hover:text-fuchsia-50 hover:font-bold text-neutral-700 px-4 py-2 rounded"
+                >
+                  Close
+                </button>
+
+                {/* Icons */}
+                <div className="flex space-x-4">
+                  {projects[expandedProject].github && (
+                    <a href={projects[expandedProject].github} target="_blank" rel="noopener noreferrer">
+                      <div className="icons w-[2.25em] h-[2.25em] rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce">
+                        <FontAwesomeIcon icon={faGithub} className="fa-lg" style={{ color: '#987cbf', height: '1em' }} />
+                      </div>
+                    </a>
+                  )}
+
+                  {projects[expandedProject].youtube && (
+                    <a href={projects[expandedProject].youtube} target="_blank" rel="noopener noreferrer">
+                      <div className="icons w-[2.25em] h-[2.25em] rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce">
+                        <FontAwesomeIcon icon={faYoutube} className="fa-lg" style={{ color: '#FF0000', height: '1em' }} />
+                      </div>
+                    </a>
+                  )}
+
+                  {projects[expandedProject].devpost && (
+                    <a href={projects[expandedProject].devpost} target="_blank" rel="noopener noreferrer">
+                      <div className="icons w-[2.25em] h-[2.25em] rounded-3xl border-violet-500 border-4 flex items-center justify-center bounce">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.002 1.61L0 12.004L6.002 22.39h11.996L24 12.004L17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853z" />
+                        </svg>
+                      </div>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+
+
+          // PROJECTS grid
+          <div className="flex flex-col w-full">
+            <h2 className="text-lg font-black text-violet-600 pl-5 pt-5">🏆 Hackathon Projects</h2>
+
+            <div className="flex flex-wrap justify-start">
+
+
+
+              {hackathonProjects.map((project) => (
+                <div
+                  key={project.awardName}
+                  className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
+                  style={{ minHeight: "300px" }}
+                >
+                  <Award awardName={project.awardName} imgUrl={project.imgUrl} />
+                  <button
+                    onClick={() => {
+                      const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
+                      setExpandedProject(originalIndex);
+                    }}
+                    className="mt-2 text-violet-500 underline"
+                  >
+                    Read More
+                  </button>
+                </div>
+              ))}
+
+            </div>
+
+            <h2 className="text-xl font-bold text-violet-600 pl-5 pt-5">💻 Personal Projects</h2>
+
+            <div className="flex flex-wrap justify-start">
+
+              {personalProjects.map((project) => (
+                <div
+                  key={project.awardName}
+                  className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
+                  style={{ minHeight: "300px" }}
+                >
+                  <Award awardName={project.awardName} imgUrl={project.imgUrl} />
+                  <button
+                    onClick={() => {
+                      const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
+                      setExpandedProject(originalIndex);
+                    }}
+                    className="mt-2 text-violet-500 underline"
+                  >
+                    Read More
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="text-xl font-bold text-violet-600 pl-5 pt-5">👩🏽‍💼 Client Projects</h2>
+            <div className="flex flex-wrap justify-start">
+
+              {clientProjects.map((project) => (
+                <div
+                  key={project.awardName}
+                  className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
+                  style={{ minHeight: "300px" }}
+                >
+                  <Award
+  awardName={
+    (project.awardName === "ConvoSenses" || project.awardName === "OneVote")
+      ? "🏆 " + project.awardName
+      : project.awardName
+  }
+  imgUrl={project.imgUrl}
+/>
+
+                  <button
+                    onClick={() => {
+                      const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
+                      setExpandedProject(originalIndex);
+                    }}
+                    className="mt-2 text-violet-500 underline"
+                  >
+                    Read More
+                  </button>
+                </div>
+              ))}
+            </div>
+
           </div>
         )}
       </div>

@@ -12,6 +12,7 @@ import docuDog from './images/docuDog.png';
 import deadlineTracker from './images/deadlineTracker.png'; 
 import architext from './images/architext.png'; 
 import chatBot from './images/chatBot.png';
+import ar from './images/convosenses.png'; 
 
 function Award({ awardName, awardDescription, skills, imgUrl }) {
     let imgSrc;
@@ -54,6 +55,9 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
             break; 
         case 'plannerIo':
             imgSrc = plannerIo; 
+            break; 
+        case 'ar':
+            imgSrc = ar; 
             break; 
         default:
             imgSrc = null;
@@ -123,6 +127,15 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
                     ></iframe>
                 );
                 break;
+            case 'ar': 
+                return (
+                     <iframe
+                        src="https://www.youtube.com/embed/Afk6gSBdXUg"
+                        className="mx-auto border-4 w-full h-auto border-fuchsia-500"
+                        title={awardName}
+                        allowFullScreen
+                    ></iframe>
+                )
             default:
                 return null;
         }

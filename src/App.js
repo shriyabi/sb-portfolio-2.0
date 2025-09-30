@@ -214,11 +214,11 @@ function App() {
           <div class="w-full lg:w-1/3 min-h-screen flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight md:mt-20 lg:mt-0">
             <h2 class='items-start text-cyan-300'> FEATURED NEWS </h2>
             <div class="flex flex-col md:flex-row lg:flex-col w-full flex-wrap">
-              {/* <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
-                <h3 class="text-xl overline p-3 text-violet-400">ArchiText</h3>
-                <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/HxY2zq5rcqk" />
-                <h3>SpartaHacks</h3>
-              </div> */}
+               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-fuchsia-400">Conversense</h3>
+                <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/YTZotjnA4ok&t=58s" />
+                <h3>MHacks 25 (Best Use of Snap AR: 2nd Place) </h3>
+              </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-violet-400">Deadline Tracker</h3>
                 <img src={deadlineTracker} class=" w-full h-auto"/>
