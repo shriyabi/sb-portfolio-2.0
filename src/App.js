@@ -216,7 +216,7 @@ function App() {
             <div class="flex flex-col md:flex-row lg:flex-col w-full flex-wrap">
                <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-fuchsia-400">Conversense</h3>
-                <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/YTZotjnA4ok&t=58s" />
+                <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/YTZotjnA4ok" />
                 <h3>MHacks 25 (Best Use of Snap AR: 2nd Place) </h3>
               </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">

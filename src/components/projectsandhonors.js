@@ -138,7 +138,7 @@ function ProjectsAndHonors() {
       imgUrl: "ar",
       imgUrlforProj: ar,
       github: "https://github.com/MatchaOnMuffins/MHacks25",
-      youtube: "https://www.youtube.com/watch?v=YTZotjnA4ok&t=58s",
+      youtube: "https://www.youtube.com/watch?v=YTZotjnA4ok",
       devpost: "https://devpost.com/software/conversenses?ref_content=my-projects-tab&ref_feature=my_projects"
     },
   ];
