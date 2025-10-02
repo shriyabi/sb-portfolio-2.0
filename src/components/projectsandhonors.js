@@ -105,13 +105,15 @@ function ProjectsAndHonors() {
       skills: "React.js, TailwindCSS, Node.js, Google Task API, Google Oauth",
       imgUrl: "plannerIo",
       imgUrlforProj: plannerIo,
+      website: "https://shriyabi.github.io/Planner.io/",
       github: "https://github.com/shriyabi/Planner.io"
     },
     {
       awardName: "Deadline Tracker",
-      awardDescription: "Track deadlines",
-      skills: "React.js, TailwindCSS, Node.js, Gemma, Google Calendar API, Gogle OAuth, Named Entity Recognition, FastAPI",
+      awardDescription: "Upload string of events for Gemma (in version 1) or Gemini (in version 2) to extract the event name, time, and date and format it in a ready to add to Google Calendar form with the click of one button to approve adding the event to any calendar selected by the user. View a list of all the events from selected calendars. CRUD calendars as well. Manually add events if needed as well. Please try the website on the left. After signing in, click Tools to get started. \n If you would like to see the Fined-tuned Gemma model with NERs please refer to the GitHub under backend/ai_llm_backend.py as the current version has been upgraded to Gemini Flash for more accuracy.",
+      skills: "React.js, TailwindCSS, Node.js, Gemma, Google Calendar API, Gogle OAuth, Named Entity Recognition, FastAPI, Render Servers",
       imgUrl: "deadline",
+      website: "https://shriyabi.github.io/deadline_tracker_more/",
       imgUrlforProj: deadlineTracker,
       github: "https://github.com/shriyabi/deadline_tracker"
     },
@@ -133,7 +135,7 @@ function ProjectsAndHonors() {
     {
 
       awardName: "🏆 ConvoSenses",
-      awardDescription: "AR Intelligent Public Speaking Coach with a user-dashboard that displays real-time feedback and evaluation from the agentic workflow of LLM-as-judge agents. \n 🏆 Best Use of Snapr AR (presented by Snapchat): 2nd Place",
+      awardDescription: "AR Intelligent Public Speaking Coach with a user-dashboard that displays real-time feedback and evaluation from the agentic workflow of LLM-as-judge agents. \n 🏆 Best Use of Snap AR (presented by Snapchat): 2nd Place",
       skills: "LangChain, Gemini API, ReactJS",
       imgUrl: "ar",
       imgUrlforProj: ar,
@@ -236,7 +238,31 @@ function ProjectsAndHonors() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                ) : projects[expandedProject].imgUrlforProj ? (
+                ) : projects[expandedProject].website ? (
+                  <div className="w-full">
+                    {/* Iframe to display the website */}
+                    <iframe
+                      src={projects[expandedProject].website}
+                      title={projects[expandedProject].awardName} 
+                      className="w-full h-96 border border-gray-300 rounded-md" 
+                      allowFullScreen 
+                    >
+                      Your browser does not support iframes.
+                    </iframe>
+                    {/* Button to open the website in a new tab */}
+                    <div className="mt-4 text-center">
+                      <a
+                        href={projects[expandedProject].website}
+                        target="_blank" // This opens the link in a new tab
+                        rel="noopener noreferrer"
+                        className="inline-block px-6 py-2 bg-fuchsia-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
+                      >
+                        Open in New Tab
+                      </a>
+                    </div>
+                  </div>
+                )
+                : projects[expandedProject].imgUrlforProj ? (
                   <img
                     src={projects[expandedProject].imgUrlforProj}
                     alt={projects[expandedProject].awardName}
