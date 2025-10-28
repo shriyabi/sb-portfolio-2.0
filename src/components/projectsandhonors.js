@@ -222,7 +222,6 @@ function ProjectsAndHonors() {
           </>
         ) : expandedProject !== null ? (
           <div className="w-full flex flex-col md:flex-row bg-fuchsia-50 rounded-b-md shadow-md">
-            {/* Left side: video/image */}
             {(projects[expandedProject].videoUrl || projects[expandedProject].youtube || projects[expandedProject].imgUrlforProj) && (
               <div className="w-full p-4 bg-violet-500 md:w-1/2 flex items-center justify-center rounded-bl-md">
                 {projects[expandedProject].videoUrl ? (
@@ -240,7 +239,6 @@ function ProjectsAndHonors() {
                   ></iframe>
                 ) : projects[expandedProject].website ? (
                   <div className="w-full">
-                    {/* Iframe to display the website */}
                     <iframe
                       src={projects[expandedProject].website}
                       title={projects[expandedProject].awardName} 
@@ -249,7 +247,6 @@ function ProjectsAndHonors() {
                     >
                       Your browser does not support iframes.
                     </iframe>
-                    {/* Button to open the website in a new tab */}
                     <div className="mt-4 text-center">
                       <a
                         href={projects[expandedProject].website}
@@ -271,8 +268,7 @@ function ProjectsAndHonors() {
                 ) : null}
               </div>
             )}
-
-            {/* Right side: text + buttons */}
+            
             <div className={`w-full ${projects[expandedProject].videoUrl || projects[expandedProject].imgUrlforProj ? 'md:w-1/2' : ''} p-6 flex flex-col justify-between`}>
               <div>
                 <h2 className="text-2xl text-cyan-500 font-bold mb-2">
@@ -328,7 +324,7 @@ function ProjectsAndHonors() {
 
           // PROJECTS grid
           <div className="flex flex-col w-full">
-            <h2 className="text-lg font-black text-violet-600 pl-5 pt-5">🏆 Hackathon Projects</h2>
+            <h2 className="text-lg font-black text-violet-600 overline pl-5 pt-5"> Hackathon Projects</h2>
 
             <div className="flex flex-wrap justify-start">
 
@@ -336,77 +332,84 @@ function ProjectsAndHonors() {
 
               {hackathonProjects.map((project) => (
                 <div
-                  key={project.awardName}
-                  className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
-                  style={{ minHeight: "300px" }}
+                key={project.awardName}
+                className="w-1/2 md:w-1/3 lg:w-1/4 p-3 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"
+                style={{ minHeight: "350px" }}
+              >
+                <Award
+                  awardName={project.awardName}
+                  imgUrl={project.imgUrl}
+                />
+                <button
+                  onClick={() => {
+                    const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
+                    setExpandedProject(originalIndex);
+                  }}
+                  className="text-violet-600 font-medium hover:text-violet-800"
                 >
-                  <Award awardName={project.awardName} imgUrl={project.imgUrl} />
-                  <button
-                    onClick={() => {
-                      const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
-                      setExpandedProject(originalIndex);
-                    }}
-                    className="mt-2 text-violet-500 underline"
-                  >
-                    Read More
-                  </button>
-                </div>
+                  Read More
+                </button>
+              </div>
+              
               ))}
 
             </div>
 
-            <h2 className="text-xl font-bold text-violet-600 pl-5 pt-5">💻 Personal Projects</h2>
+              
+            <h2 className="text-xl font-bold text-violet-600 overline pl-5 pt-5"> Personal Projects</h2>
 
             <div className="flex flex-wrap justify-start">
 
               {personalProjects.map((project) => (
                 <div
-                  key={project.awardName}
-                  className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
-                  style={{ minHeight: "300px" }}
+                key={project.awardName}
+                className="w-1/2 md:w-1/3 lg:w-1/4 p-3 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"
+                style={{ minHeight: "350px" }}
+              >
+                <Award
+                  awardName={project.awardName}
+                  imgUrl={project.imgUrl}
+                  className="w-[90%] h-[200px] object-cover rounded-lg shadow-md"
+                />
+                <button
+                  onClick={() => {
+                    const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
+                    setExpandedProject(originalIndex);
+                  }}
+                  className="mt-3 text-violet-600 font-medium hover:text-violet-800"
                 >
-                  <Award awardName={project.awardName} imgUrl={project.imgUrl} />
-                  <button
-                    onClick={() => {
-                      const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
-                      setExpandedProject(originalIndex);
-                    }}
-                    className="mt-2 text-violet-500 underline"
-                  >
-                    Read More
-                  </button>
-                </div>
+                  Read More
+                </button>
+              </div>
+              
               ))}
             </div>
 
-            <h2 className="text-xl font-bold text-violet-600 pl-5 pt-5">👩🏽‍💼 Client Projects</h2>
+            <h2 className="text-xl font-bold text-violet-600 overline pl-5 pt-5"> Client Projects</h2>
             <div className="flex flex-wrap justify-start">
 
               {clientProjects.map((project) => (
                 <div
-                  key={project.awardName}
-                  className="w-1/2 md:w-1/4 p-5 flex flex-col justify-between items-center text-center"
-                  style={{ minHeight: "300px" }}
+                key={project.awardName}
+                className="w-1/2 md:w-1/3 lg:w-1/4 p-3 flex flex-col justify-between items-center text-center hover:scale-105 transition-transform duration-300"
+                style={{ minHeight: "350px" }}
+              >
+                <Award
+                  awardName={project.awardName}
+                  imgUrl={project.imgUrl}
+                  className="w-[90%] h-[200px] object-cover rounded-lg shadow-md"
+                />
+                <button
+                  onClick={() => {
+                    const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
+                    setExpandedProject(originalIndex);
+                  }}
+                  className="mt-3 text-violet-600 font-medium hover:text-violet-800"
                 >
-                  <Award
-  awardName={
-    (project.awardName === "ConvoSenses" || project.awardName === "OneVote")
-      ? "🏆 " + project.awardName
-      : project.awardName
-  }
-  imgUrl={project.imgUrl}
-/>
-
-                  <button
-                    onClick={() => {
-                      const originalIndex = projects.findIndex(p => p.awardName === project.awardName);
-                      setExpandedProject(originalIndex);
-                    }}
-                    className="mt-2 text-violet-500 underline"
-                  >
-                    Read More
-                  </button>
-                </div>
+                  Read More
+                </button>
+              </div>
+              
               ))}
             </div>
 

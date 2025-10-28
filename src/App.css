@@ -96,3 +96,11 @@
 .yellow{
   box-shadow: 0em 0em .5em #fde047a9;
 }
+
+
+.glow-effect {
+  outline: 8px solid rgb(239, 68, 68); /* red-500 */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  padding: 3px; 
+  transition: all 0.3s ease;
+}
