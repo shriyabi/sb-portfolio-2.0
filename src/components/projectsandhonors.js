@@ -64,7 +64,7 @@ function ProjectsAndHonors() {
       awardDescription:
         "Web application with generative artifical intelligence to help people to get summaries of particular features of important documents.",
       skills: "Python, Gemini 1.5 Pro API, LLM Prompt Engineering",
-      imgUrl: "docudog",
+      imgUrl: "docuDog",
       imgUrlforProj: docuDog,
       devpost: "https://devpost.com/software/docudog",
       youtube: "https://www.youtube.com/watch?v=Qq7_72aoV08"
@@ -76,7 +76,7 @@ function ProjectsAndHonors() {
       skills:
         "PyTorch, Python, Kaggle, Pandas, Google Cloud, Google Search API, RNNs",
       imgUrl: "demo",
-      imgUrlforProj: chatBot,
+      imgUrlforProj: demo,
       youtube: "https://www.youtube.com/watch?v=Afk6gSBdXUg"
     },
     {
@@ -115,7 +115,8 @@ function ProjectsAndHonors() {
       imgUrl: "deadline",
       website: "https://shriyabi.github.io/deadline_tracker_more/",
       imgUrlforProj: deadlineTracker,
-      github: "https://github.com/shriyabi/deadline_tracker_more"
+      github: "https://github.com/shriyabi/deadline_tracker_more",
+      //youtube: "https://www.youtube.com/watch?v=rO4RcFccB-k"
     },
     {
       awardName: "Chatbot for Medical Condition Awareness",
@@ -254,7 +255,7 @@ function ProjectsAndHonors() {
                         rel="noopener noreferrer"
                         className="inline-block px-6 py-2 bg-fuchsia-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
                       >
-                        Open in New Tab
+                        Open Application in New Tab
                       </a>
                     </div>
                   </div>

@@ -51,7 +51,7 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
         architext: "https://www.youtube.com/embed/HxY2zq5rcqk",
         oneVote: "https://www.youtube.com/embed/-eGkraEZ6HA",
         greenbro: "https://www.youtube.com/embed/BbTT9nJbXnE",
-        docudog: "https://www.youtube.com/embed/Qq7_72aoV08",
+        //docudog: "https://www.youtube.com/embed/Qq7_72aoV08",
         demo: "https://www.youtube.com/embed/Afk6gSBdXUg",
         ar: "https://www.youtube.com/embed/Afk6gSBdXUg",
       };
