@@ -115,7 +115,7 @@ function ProjectsAndHonors() {
       imgUrl: "deadline",
       website: "https://shriyabi.github.io/deadline_tracker_more/",
       imgUrlforProj: deadlineTracker,
-      github: "https://github.com/shriyabi/deadline_tracker"
+      github: "https://github.com/shriyabi/deadline_tracker_more"
     },
     {
       awardName: "Chatbot for Medical Condition Awareness",
