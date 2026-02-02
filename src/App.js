@@ -265,7 +265,7 @@ function App() {
   <div class="flex flex-col gap-6">
     
     {/* EDUCATION BLOCK */}
-    <div id="Education">
+    <div id="Experience">
       <h class='text-xl underline font-bold text-fuchsia-400 mb-4'> EDUCATION </h>
       <div class="border-purple-400 border-4 mt-4 bg-gray-900/50 rounded-xl p-5 flex flex-col text-slate-100 shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
         <div class="flex justify-between flex flex-col items-start">
