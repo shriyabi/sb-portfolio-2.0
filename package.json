@@ -1,6 +1,7 @@
 {
   "name": "shriya-biddala-portfolio",
   "homepage": "https://sbiddala.dev/",
+  "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
@@ -43,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.3.0"
   }
 }
