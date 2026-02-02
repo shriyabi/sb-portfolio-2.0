@@ -13,6 +13,7 @@ import deadlineTracker from './images/deadlineTracker.png';
 import architext from './images/architext.png'; 
 import chatBot from './images/chatBot.png';
 import ar from './images/convosenses.png'; 
+import budget from './images/budgetApp.png'; 
 
 function Award({ awardName, awardDescription, skills, imgUrl }) {
     const sources = {
@@ -30,6 +31,7 @@ function Award({ awardName, awardDescription, skills, imgUrl }) {
       medChatbot,
       plannerIo,
       ar,
+      budget
     };
   
     const imgSrc = sources[imgUrl] || null;

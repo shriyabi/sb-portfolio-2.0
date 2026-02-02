@@ -20,6 +20,7 @@ import plannerIo from './components/images/plannerIo.png';
 import medChatbot from './components/images/medChatbot.png';
 import docuDog from './components/images/docuDog.png';
 import deadlineTracker from './components/images/deadlineTracker.png';
+import budget from './components/images/budgetApp.png';
 import { useNavigate } from "react-router-dom";
 
 function App() {
@@ -135,12 +136,13 @@ function App() {
         <div className="w-full md:w-auto px-5 py-4 mb-7 purple border-violet-500 mr-5 lg:min-h-screen rounded-xl border-4">
   <div className="sticky top-10 flex flex-row lg:flex-col items-center justify-center text-3xl gap-5 lg:gap-8">
   {[
-  { id: "Home", icon: "🏠" },
-  { id: "Skills", icon: "🔧" },
-  { id: "Experience", icon: "🏫" },
-  { id: "Projects", icon: "🧳" },
-  { id: "Contact", icon: "💬" },
-].map(({ id, icon }) => (
+  { id: "Home", icon: "🏠", tooltip:"Home" },
+  { id: "Skills", icon: "🔧", tooltip:"Skills" },
+  { id: "Experience", icon: "🏫", tooltip:"Education" },
+  { id: "Projects", icon: "🧳", tooltip:"Projects" },
+  { id: "Contact", icon: "💬", tooltip:"Contact Me" },
+  { id: "Resume", icon: "📄", tooltip:"Resume" },
+].map(({ id, icon, tooltip }) => (
   <a
     key={id}
     href={`#${id}`}
@@ -151,18 +153,12 @@ function App() {
         : "border-transparent bg-slate-100 hover:scale-105 hover:border-yellow-400"}
     `}
     style={{ minWidth: "2.5rem", textAlign: "center" }}
+    title={tooltip}
   >
     {icon}
   </a>
 ))}
 
-
-    <button
-      onClick={() => navigate("/resume")}
-      className="p-2 text-base font-bold text-slate-700 bg-slate-100 rounded-xl zoom-out hover:bg-gradient-to-r hover:from-fuchsia-500 hover:to-cyan-500 hover:text-white transition-all duration-300"
-    >
-      Resume
-    </button>
   </div>
 </div> 
 
@@ -198,123 +194,166 @@ function App() {
 
             <div class="border-2 mr-5 my-4"></div>
 
-            <div class="w-full flex flex-col md:flex-row">
-              <div id="Skills" class="w-full md:w-1/2 mr-7 flex flex-col">
-                <h class="text-xl underline font-bold text-violet-500"> SKILLS </h>
-                <h class="text-sm mt-3 overline text-fuchsia-500"> AI/ML/NLP </h>
-                <Skills
-                  skillName="PyTorch"
-                  year="3 YEARS" />
-                <Skills
-                  skillName="HuggingFace's Transformers Lib."
-                  year="3 YEARS" />
-                <Skills
-                  skillName="Pandas"
-                  year="3 YEARS" />
-                <Skills
-                  skillName="Numpy"
-                  year="3 YEARS" />
-                <Skills
-                  skillName="Generative LLMs"
-                  year="2 YEARS" />
-                <Skills
-                  skillName="NLTK/BERT"
-                  year="1 YEARS" />
-                <Skills
-                  skillName="Azure Open AI"
-                  year="< 1 YEAR" />
-                <Skills
-                  skillName="LangGraph + LangChain"
-                  year="< 1 YEAR" />
-                <Skills
-                  skillName="Vector Embedding"
-                  year="< 1 YEAR" />
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+  
+  {/* Skills */}
+  <div id="Skills" class="flex flex-col">
+    <h class="text-xl underline font-bold text-violet-500 mb-4"> SKILLS </h>
+    
+    {/* AI / ML / NLP */}
+    <div class="mb-6">
+      <h class="text-sm overline text-fuchsia-500 mb-2"> AI/ML/NLP </h>
+      <div class="space-y-1">
+        <Skills skillName="PyTorch" year="4 YEARS" />
+        <Skills skillName="OpenCV" year="4 YEARS" />
+        <Skills skillName="Transformers (HuggingFace)" year="4 YEARS" />
+        <Skills skillName="Scikit-learn" year="4 YEARS" />
+        <Skills skillName="Pandas" year="4 YEARS" />
+        <Skills skillName="LLMs (RAG, Fine-tuning)" year="4 YEARS" />
+        <Skills skillName="Langgraph + Langchain" year="1 YEAR" />
+      </div>
+    </div>
 
-                <h class="text-sm mt-3 overline text-cyan-400"> SWE </h>
-                <Skills
-                  skillName="Python"
-                  year="4 YEARS" />
-                <Skills
-                  skillName="C++"
-                  year="2 YEARS" />
-                <Skills
-                  skillName="C"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="Java"
-                  year="7 YEARS" />
+    {/* SWE & Systems */}
+    <div class="mb-6">
+      <h class="text-sm overline text-cyan-400 mb-2"> SWE & Systems </h>
+      <div class="space-y-1">
+        <Skills skillName="Java" year="6 YEARS" />
+        <Skills skillName="Git" year="6 YEARS" />
+        <Skills skillName="Python" year="5 YEARS" />
+        <Skills skillName="Google Cloud Platform" year="4 YEARS" />
+        <Skills skillName="C++" year="3 YEARS" />
+        <Skills skillName="C" year="2 YEARS" />
+        <Skills skillName="Unix" year="2 YEARS" />
+        <Skills skillName="Go" year="< 1 YEAR" />
+      </div>
+    </div>
 
-                <h class="text-sm mt-3 overline text-yellow-400"> Full-Stack Development </h>
-                <Skills
-                  skillName="ReactJS"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="Django"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="TailwindCSS"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="HTML + CSS"
-                  year="5 YEARS" />
-                <Skills
-                  skillName="JavaScript"
-                  year="3 YEARS" />
-                <Skills
-                  skillName="Express.js"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="Node.js"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="MySQL"
-                  year="1 YEAR" />
-                <Skills
-                  skillName="GraphQL"
-                  year="1 YEAR" />
+    {/* Full-Stack */}
+    <div class="mb-6">
+      <h class="text-sm overline text-yellow-400 mb-2"> Full-Stack Development </h>
+      <div class="space-y-1">
+        <Skills skillName="HTML + CSS" year="6 YEARS" />
+        <Skills skillName="JavaScript" year="4 YEARS" />
+        <Skills skillName="ReactJS" year="2 YEARS" />
+        <Skills skillName="TailwindCSS" year="2 YEARS" />
+        <Skills skillName="Express.js" year="2 YEARS" />
+        <Skills skillName="Node.js" year="2 YEARS" />
+        <Skills skillName="MySQL" year="2 YEARS" />
+        <Skills skillName="Django" year="1 YEAR" />
+        <Skills skillName="NoSQL" year="1 YEAR" />
+        <Skills skillName="Vite" year="1 YEAR" />
+        <Skills skillName="FastAPI" year="1 YEAR" />
+        <Skills skillName="UI/UX & Accessibility" year="1 YEAR" />
+      </div>
+    </div>
 
-              </div>
-              <div id="Experience" class="w-full mt-10 md:mt-0 md:w-1/2">
-                <h class='text-xl underline font-bold text-fuchsia-400'> EDUCATION </h>
-                <div class="border-purple-400 border-4 purple rounded-xl p-4 my-4 flex flex-col justify-start text-slate-100">
-                  <h class="text-lg font-bold">University of Michigan - Ann Arbor</h>
-                  <h class="text-base font-semibold italic">Senior, Computer Science Engineering</h>
-                  <div class="flex pt-3 flex-col lg:flex-row">
-                    <div class="w-full flex flex-col lg:w-1/2 lg:mr-3">
-                      <h class="text-sm underline">Coursework:</h>
-                      <h class="text-base leading-4">Data Structures and Algorithms</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Introduction to Machine Learning</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Introduction to Artificial Intelligence</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Introduction to Natural Language Progessing</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Introduction to Computer Architecture</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Data-Driven Web Applications</h>
-                      <h class="leading-5 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Introduction to Operating Systems</h>
-                      <h class="leading-5 text-neutral-800">test </h>
-                    </div>
-                    <div class="w-full flex flex-col lg:w-1/2">
-                      <h class="text-sm underline">Activities:</h>
-                      {/* <h class="text-base leading-4 text-green-300">Incoming SWE Intern @ Walmart Global Tech </h> */}
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Residential Advisor</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4">Instructional Aide for Data Structures and Algorithms</h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base"> Freelance Full-Stack Developer </h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base"> YouTuber (Travel) </h>
-                      <h class="leading-3 text-neutral-800">test </h>
-                      <h class="text-base leading-4 text-emerald-300"> Previous AI/ML Intern at Walmart Global Tech </h>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    {/* Low Level Systems */}
+    <div class="mb-6">
+      <h class="text-sm overline text-violet-500 mb-2"> Low-Level Systems </h>
+      <div class="space-y-1">
+        <Skills skillName="Valgrind" year="2 YEARS" />
+        <Skills skillName="GDB" year="2 YEARS" />
+        <Skills skillName="ARM-64 Assembly" year="1 YEAR" />
+        <Skills skillName="Multithreading (Boost)" year="1 YEAR" />
+        <Skills skillName="TCP/IP" year="1 YEAR" />
+      </div>
+    </div>
+  </div>
+  
+  {/* Education & Credentials */}
+  <div class="flex flex-col gap-6">
+    
+    {/* EDUCATION BLOCK */}
+    <div id="Education">
+      <h class='text-xl underline font-bold text-fuchsia-400 mb-4'> EDUCATION </h>
+      <div class="border-purple-400 border-4 mt-4 bg-gray-900/50 rounded-xl p-5 flex flex-col text-slate-100 shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+        <div class="flex justify-between flex flex-col items-start">
+          <h class="text-lg font-bold">University of Michigan</h>
+          <h class="text-sm text-gray-400">Ann Arbor, MI</h>
+        </div>
+        
+        <h class="text-base font-semibold italic mt-2 text-yellow-400">B.S.E. Computer Science Engineering [2026]</h>
+        
+        <div class="border-t border-gray-700 my-3"></div>
+
+        <div class="flex flex-col gap-4">
+          <div class="w-full">
+            <h class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Relevant Coursework</h>
+            <ul class="text-base space-y-1 text-gray-300 list-disc list-inside">
+              <li>Data Structures & Algorithms (EECS 281)</li>
+              <li>Machine Learning (EECS 445)</li>
+              <li>Artificial Intelligence (EECS 492)</li>
+              <li>Operating Systems (EECS 482)</li>
+              <li>Computer Architecture (EECS 370)</li>
+              <li>Natural Language Processing (EECS 487)</li>
+              <li>Computer Science Pragmatics (EECS 201)</li>
+              <li>Human-Centered Software Development (EECS 497)</li>
+              <li>Data-Driven Web Applications (SI 364)</li>
+            </ul>
+          </div>
+          <div class="w-full">
+            <h class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2"> Experience </h>
+            <ul class="text-base space-y-1 text-gray-300 list-disc list-inside">
+              <li> AI/ML SWE Intern @ <span class="text-emerald-400 font-bold"> Walmart Global Tech (2025) </span></li>
+              <li>Freelance Full Stack Developer @ <span class="text-cyan-500 font-bold"> For Michigan (under America Votes) (2024) </span></li>
+              <li> Data Analytics Researcher @ <span class="text-yellow-500 font-bold"> Social A.I. Lab (University of Michigan) [UROP] (2023-24) </span></li>
+            </ul>
+          </div>
+
+          <div class="w-full">
+            <h class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2"> Activities</h>
+            <ul class="text-base space-y-1 text-gray-300 list-disc list-inside">
+              <li><span class="">Instructional Aide</span> (for Data Structures and Algorithms)</li>
+              <li>Residential Advisor</li>
+              <li>Freelance Developer</li>
+              <li>YouTuber (Travel)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Credentials */}
+    <div id="Credentials">
+      <h class='text-xl underline font-bold text-violet-400 mb-4'> CREDENTIALS </h>
+      
+      <div class="border-fuchsia-400 mt-4 border-4 bg-gray-900/50 rounded-xl p-5 flex flex-col text-slate-100 shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+        
+      {/* Credential 1 */}
+      <a href="https://coursera.org/share/413b3c5bd475e74e062efe6afcbd1d4b" target="_blank" rel="noreferrer" 
+         class="group block relative overflow-hidden rounded-xl border-2 border-fuchsia-500/30 bg-gray-900/80 p-4 transition-all hover:scale-[1.02] hover:border-fuchsia-500 hover:shadow-xl hover:shadow-fuchsia-500/20 cursor-pointer">
+        
+        <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-fuchsia-500/10 blur-2xl transition-all group-hover:bg-fuchsia-500/20"></div>
+
+        <div class="flex items-center gap-4 relative z-10">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-slate-400 text-white shadow-lg">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+          </div>
+
+          <div class="flex flex-col">
+            <h3 class="text-base font-bold text-slate-100 group-hover:text-fuchsia-300 transition-colors">Applied Machine Learning in Python</h3>
+            <p class="text-xs text-cyan-400">University of Michigan (Coursera)</p>
+          </div>
+
+          <div class="ml-auto">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* delete */}
+
+
+
             <div class="border-2 mr-5 my-8"></div>
             <div id="Projects" class="flex flex-col">
             <h class='text-xl underline text-cyan-300 font-semibold'> PROJECTS + HONORS </h>
@@ -326,6 +365,11 @@ function App() {
           <div class="w-full lg:w-1/3 min-h-screen flex flex-col items-end justify-start animate__animated animate__delay-3s animate__slideInRight md:mt-20 lg:mt-0">
             <h2 class='items-start text-cyan-300'> FEATURED NEWS </h2>
             <div class="flex flex-col md:flex-row lg:flex-col w-full flex-wrap">
+              <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
+                <h3 class="text-xl overline p-3 text-cyan-400">Encourage-mint</h3>
+                <img src={budget} class=" w-full h-auto" />
+                <h3> Personal Project </h3>
+              </div>
               <div class="w-full md:w-1/2 lg:w-full my-2 h-auto text-slate-100 border-yellow-400 p-3 yellow border-4 align-end rounded-xl">
                 <h3 class="text-xl overline p-3 text-fuchsia-400">Conversense</h3>
                 <iframe class="w-full h-auto relative" src="https://www.youtube.com/embed/YTZotjnA4ok" />
