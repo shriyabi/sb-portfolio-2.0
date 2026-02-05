@@ -1,144 +1,199 @@
+import React from 'react';
+
 export default function Resume() {
+  
+  // Helper for neon text styles
+  const neonText = (color) => `text-transparent bg-clip-text bg-gradient-to-r ${color} drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]`;
+  
+  // Helper for neon box styles
+  const neonBox = (colorBorder, shadowColor) => 
+    `bg-neutral-900/80 backdrop-blur-md border-2 ${colorBorder} rounded-2xl shadow-[0_0_15px_${shadowColor},inset_0_0_10px_${shadowColor}40]`;
+
   return (
-    <div id="Resume" className="comfortaa bg-neutral-800 min-h-screen w-full flex flex-col justify-start items-start text-slate-100 p-5 md:px-10">
+    <div id="Resume" className="comfortaa min-h-screen w-full bg-neutral-950 text-slate-100 p-6 md:p-12 overflow-x-hidden selection:bg-fuchsia-500/40 selection:text-white">
       
-      <h1 className="text-5xl text-cyan-300 font-bold mb-5 animate__animated animate__fadeInDown">Resume</h1>
-      
-      {/* Education */}
-      <div className="border-4 border-fuchsia-400 rounded-xl bg-neutral-700 shadow-xl p-5 w-full mb-8">
-        <h2 className="text-2xl text-fuchsia-400 font-semibold underline mb-2">Education</h2>
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <div>
-            <h3 className="text-lg font-bold">The University of Michigan</h3>
-            <p className="italic">Ann Arbor, MI</p>
-            <p>BSE in Computer Science Engineering, Minor in UX/UI Development</p>
-            {/* <p className="text-yellow-300">Expected Graduation: May 2026 | GPA: 3.64/4.00</p> */}
-            <p className="text-yellow-300">Expected Graduation: May 2026</p>
-            <p className="text-sm mt-2 text-neutral-300">
-              <b>Coursework:</b> Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Machine Learning, 
-              Natural Language Processing, Computer Organization, Data-Driven Web Applications, AI App Development for Entrepreneurship
-            </p>
-            <p className="text-sm mt-2 text-neutral-300">
-              <b>Awards:</b> Aspirations in Computing National Honorable Mention (2023), MHacks OptiMize 3rd Place, TI Codes Competition Honorable Mention, Joseph M. Geisinger Scholarship
-            </p>
-            <p className="text-sm mt-2 text-neutral-300">
-              <b>Activities:</b> Instructional Aide for Data Structures & Algorithms, Residential Advisor, Freelance Web Developer
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Work Experience */}
-      <div className="border-4 border-cyan-300 rounded-xl bg-neutral-700 shadow-xl p-5 w-full mb-8">
-        <h2 className="text-2xl text-cyan-300 font-semibold underline mb-2">Work Experience</h2>
-
-        {/* Walmart */}
-        <div className="mb-6">
-          <h3 className="text-xl font-bold text-yellow-300">AI/ML Software Engineering Intern</h3>
-          <p className="italic text-sm">Walmart Global Tech | June 2025 - August 2025 | Bentonville, AR</p>
-          <p className="text-sm text-neutral-300 mb-2">CosmosDB, Python, Azure OpenAI, LangGraph, Postman</p>
-          <ul className="list-disc list-inside text-neutral-200 text-sm space-y-1">
-            <li>Engineered and deployed a reusable LLM-as-a-judge framework for a multi-agent HR system supporting 2.1M associates.</li>
-            <li>Designed a 25+ metric rubric using weighted confidence scores to reduce hallucination rates by 80%.</li>
-            <li>Developed a LangGraph-based sliding-window summarization method reducing token expenditure by 30%.</li>
-          </ul>
-        </div>
-
-        {/* For Michigan */}
-        <div className="mb-6">
-          <h3 className="text-xl font-bold text-yellow-300">Freelance Full-Stack Developer</h3>
-          <p className="italic text-sm">For Michigan (affiliated with America Votes) | February 2024 - November 2024</p>
-          <p className="text-sm text-neutral-300 mb-2">ReactJS, TailwindCSS, MySQL, Express.js, Node.js</p>
-          <ul className="list-disc list-inside text-neutral-200 text-sm space-y-1">
-            <li>Developed the official voter engagement website, reaching 100,000+ students and BIPOC voters statewide.</li>
-            <li>Built a MySQL + Node.js data directory with OAuth integration for 500+ organizational and social media accounts.</li>
-          </ul>
-        </div>
-
-        {/* Freelance */}
-        <div className="mb-6">
-          <h3 className="text-xl font-bold text-yellow-300">Freelance Website Developer</h3>
-          <p className="italic text-sm">Self-Employed | February 2024 - Present</p>
-          <p className="text-sm text-neutral-300 mb-2">ReactJS, TailwindCSS, HTML5, CSS3</p>
-          <ul className="list-disc list-inside text-neutral-200 text-sm space-y-1">
-            <li>Designed and deployed portfolio and organizational websites for clients including Student Turnout Projects and Michigan Next.</li>
-            <li>Optimized client visibility and engagement through responsive and SEO-friendly front-end design.</li>
-          </ul>
-        </div>
-
-        {/* PHYPid Lab */}
-        <div className="mb-6">
-          <h3 className="text-xl font-bold text-yellow-300">Research Assistant, PHYPid Lab</h3>
-          <p className="italic text-sm">University of Colorado Boulder | January 2023 - August 2023</p>
-          <p className="text-sm text-neutral-300 mb-2">C++, YAML, WebAssembly, Ubuntu</p>
-          <ul className="list-disc list-inside text-neutral-200 text-sm space-y-1">
-            <li>Defined 12+ distinct physical structures for fluid simulations via YAML configurations.</li>
-            <li>Developed a WebAssembly-based web app to host simulation libraries, transitioning access from local software to the cloud.</li>
-          </ul>
-        </div>
-
-        {/* Research */}
+      {/* --- HEADER: NEON FLICKER TITLE --- */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-end mb-16 animate__animated animate__fadeInDown">
         <div>
-          <h3 className="text-xl font-bold text-yellow-300">Machine Learning Researcher</h3>
-          <p className="italic text-sm">Brain, A.I., and Child Center, University of Colorado Boulder | Sept 2022 - Feb 2023</p>
-          <p className="text-sm text-neutral-300 mb-2">Encoder-Decoder Architecture, PyTorch, HuggingFace, Google Cloud</p>
-          <ul className="list-disc list-inside text-neutral-200 text-sm space-y-1">
-            <li>Built a fine-tuned encoder-decoder model for improved keyword recognition using Google Search API.</li>
-            <li>Achieved 75% of generated responses exceeding a ROUGE score of 70.</li>
-          </ul>
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-2 text-white drop-shadow-[0_0_20px_#d946ef] animate-pulse">
+            RESUME
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-300 drop-shadow-[0_0_5px_#22d3ee]">
+            BSE Computer Science @ UMich
+          </p>
+        </div>
+        
+        {/* Focus Statement */}
+        <div className={`mt-8 md:mt-0 p-4 ${neonBox('border-yellow-400', '#facc15')} max-w-md`}>
+          <p className="text-sm text-neutral-300 uppercase tracking-widest mb-1">Core Focus</p>
+          <p className="text-lg">
+            Bridging the gap between <span className="text-fuchsia-400 font-bold drop-shadow-[0_0_8px_#d946ef]">Machine Learning</span> research and robust <span className="text-cyan-400 font-bold drop-shadow-[0_0_8px_#22d3ee]">Full-Stack Engineering</span>.
+          </p>
         </div>
       </div>
 
-      {/* Projects */}
-      <div className="border-4 border-yellow-300 rounded-xl bg-neutral-700 shadow-xl p-5 w-full mb-8">
-        <h2 className="text-2xl text-yellow-300 font-semibold underline mb-2">Project Experience</h2>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         
-        <ul className="list-disc list-inside text-neutral-200 text-sm space-y-3">
-          <li>
-            <b>Medical Advice Delivery:</b> Created a custom BioBERT-powered NLP system for controlled clinical text generation with interactive visualization.
-          </li>
-          <li>
-            <a href="https://shriyabi.github.io/deadline_tracker/" className="underline hover:text-fuchsia-500">
-              <b>Deadline Tracker:</b>
-            </a> Developed a full-stack dashboard (React + Tailwind + Calendar API) with NLP parsing using spaCy and Gemma for event extraction.
-          </li>
-          <li>
-            <a href="https://devpost.com/software/conversenses" className="underline hover:text-fuchsia-500">
-              <b>Conversenses (MHacks 25 – 2nd Place):</b>
-            </a> Built a real-time multi-agent LangChain framework integrated with Snap AR for public speaking analysis.
-          </li>
-          <li>
-            <b>OneVote (OptiMize – 3rd Place):</b> Built a web app using OpenAI API summarizer to deliver verified election and candidate data for 1,000+ elections.
-          </li>
-          <li>
-            <b>AI Handwriting Recognition:</b> Integrated OpenCV with Express.js to digitize handwritten content, reducing teacher grading latency by 4 seconds.
-          </li>
-          <li>
-            <b>ArchiText:</b> Built a VSCode extension using Pylance API to auto-generate contextual docstrings above functions and classes.
-          </li>
-          <li>
-            <b>Planner.io:</b> Designed a React + Tailwind productivity tracker with Google Tasks API integration and color-coded task visualization.
-          </li>
-        </ul>
-      </div>
+        {/* --- LEFT COLUMN: EXPERIENCE (Timeline) --- */}
+        <div className="lg:col-span-7 space-y-12">
+          <h2 className="text-3xl font-bold text-fuchsia-400 drop-shadow-[0_0_10px_#d946ef] mb-8 border-b border-fuchsia-500/50 pb-2 inline-block">
+            EXPERIENCE
+          </h2>
 
-      {/* Skills */}
-      <div className="border-4 border-violet-400 rounded-xl bg-neutral-700 shadow-xl p-5 w-full mb-8">
-        <h2 className="text-2xl text-violet-400 font-semibold underline mb-2">Skills</h2>
+          <div className="relative border-l-4 border-neutral-800 ml-4 space-y-12">
+            
+            {/* Walmart */}
+            <div className="relative pl-8 md:pl-10 group">
+              {/* Glowing Dot */}
+              <div className="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-cyan-400 shadow-[0_0_15px_#22d3ee]"></div>
+              
+              <div className={`p-6 transition-transform hover:-translate-y-1 duration-300 ${neonBox('border-cyan-500', '#06b6d4')}`}>
+                <div className="flex flex-col md:flex-row justify-between mb-2">
+                  <h3 className="text-xl font-bold text-cyan-100">Software Engineering Intern</h3>
+                  <span className="text-cyan-300 font-mono text-sm">June 2025 - Aug 2025</span>
+                </div>
+                <p className="text-md text-cyan-200/80 italic mb-4">Walmart Global Tech | Bentonville, AR</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                   {['CosmosDB', 'Python', 'OpenAI 4.1 API', 'LLM-as-a-Judge'].map(t => (
+                     <span key={t} className="text-xs px-2 py-1 bg-cyan-900/50 border border-cyan-500/50 rounded text-cyan-200">{t}</span>
+                   ))}
+                </div>
+                <ul className="list-disc ml-4 text-sm text-neutral-300 space-y-2 marker:text-cyan-400">
+                  <li>Engineered an evaluation engine based on <b>GPT-4.1</b> LLM-as-a-judge to score procedural errors for a multi-agent system used by <b>2.1M+ associates</b>.</li>
+                  <li>Significantly improved decision-making performance, resulting in <b>hallucination rates reduced by 80%</b>.</li>
+                </ul>
+              </div>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-neutral-200">
-          <div>
-            <h3 className="text-fuchsia-400 font-semibold mb-1">Programming Languages</h3>
-            <p>C++ (11/14/17), Python, JavaScript, Java, HTML5/CSS3, Bash, SQL, GraphQL, MySQL</p>
+            {/* For Michigan */}
+            <div className="relative pl-8 md:pl-10 group">
+              <div className="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-fuchsia-500 shadow-[0_0_15px_#d946ef]"></div>
+              
+              <div className={`p-6 transition-transform hover:-translate-y-1 duration-300 ${neonBox('border-fuchsia-500', '#d946ef')}`}>
+                <div className="flex flex-col md:flex-row justify-between mb-2">
+                  <h3 className="text-xl font-bold text-fuchsia-100">Freelance Full-Stack Developer</h3>
+                  <span className="text-fuchsia-300 font-mono text-sm">Feb 2024 - Nov 2024</span>
+                </div>
+                <p className="text-md text-fuchsia-200/80 italic mb-4">For Michigan (America Votes)</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                   {['ReactJS', 'Tailwind', 'MySQL', 'Google OAuth'].map(t => (
+                     <span key={t} className="text-xs px-2 py-1 bg-fuchsia-900/50 border border-fuchsia-500/50 rounded text-fuchsia-200">{t}</span>
+                   ))}
+                </div>
+                <ul className="list-disc ml-4 text-sm text-neutral-300 space-y-2 marker:text-fuchsia-400">
+                  <li>Designed official website engaging <b>100,000+ college students</b> and BIPOC voters across Michigan.</li>
+                  <li>Built interactive data directory systems (React, Node, MySQL) hosting and querying data for <b>300+ employees</b> and social media accounts.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Freelance Web Dev */}
+            <div className="relative pl-8 md:pl-10 group">
+              <div className="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-yellow-400 shadow-[0_0_15px_#facc15]"></div>
+              
+              <div className={`p-6 transition-transform hover:-translate-y-1 duration-300 ${neonBox('border-yellow-400', '#facc15')}`}>
+                <div className="flex flex-col md:flex-row justify-between mb-2">
+                  <h3 className="text-xl font-bold text-yellow-100">Freelance Website Developer</h3>
+                  <span className="text-yellow-300 font-mono text-sm">Feb 2024 - Present</span>
+                </div>
+                <p className="text-md text-yellow-200/80 italic mb-4">Self-Employed</p>
+                <ul className="list-disc ml-4 text-sm text-neutral-300 space-y-2 marker:text-yellow-400">
+                  <li>Deployed custom portfolios and organizational sites using <b>React.js & Tailwind CSS</b>.</li>
+                  <li>Clientele includes: Student Turnout Projects, Michigan Next.</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
+        </div>
+
+        {/* --- RIGHT COLUMN: PROJECTS & SKILLS --- */}
+        <div className="lg:col-span-5 space-y-12">
+          
+          {/* Projects */}
           <div>
-            <h3 className="text-cyan-400 font-semibold mb-1">AI / ML</h3>
-            <p>PyTorch, OpenCV, Pandas, Numpy, NLTK, Transformers, LangGraph, LangChain, Azure AI, HuggingFace, Gemini API</p>
+            <h2 className="text-3xl font-bold text-green-400 drop-shadow-[0_0_10px_#4ade80] mb-8 border-b border-green-500/50 pb-2 inline-block">
+              PROJECTS
+            </h2>
+            <div className="grid gap-6">
+              {[
+                {
+                  title: "OneVote",
+                  award: "Best Social Hack - 3rd Place",
+                  tech: "OpenAI API • HTML5",
+                  desc: "Election info app using OpenAI summarizer to filter misinformation for 100+ policies.",
+                  color: "green"
+                },
+                {
+                  title: "Planner.io",
+                  tech: "React • Google Tasks API",
+                  desc: "Productivity app with color-coded tasks, focus timers, and UI-based completion tracking.",
+                  color: "green"
+                },
+                {
+                  title: "ArchiText",
+                  tech: "VSCode API • Pylance",
+                  desc: "VSCode extension that integrates buttons to auto-generate AI documentation for functions.",
+                  color: "green"
+                },
+                {
+                  title: "A.I. Handwriting Recognition",
+                  tech: "OpenCV • Express.js",
+                  desc: "Interface for 20+ teachers to convert handwritten docs to data with 4s latency.",
+                  color: "green"
+                }
+              ].map((project, idx) => (
+                <div key={idx} className={`p-5 rounded-xl border border-green-500/30 bg-neutral-900/50 hover:bg-neutral-800 hover:border-green-400 hover:shadow-[0_0_15px_#4ade80] transition-all duration-300`}>
+                  <div className="flex justify-between items-start">
+                    <h3 className="font-bold text-lg text-green-100">{project.title}</h3>
+                    {project.award && <span className="text-[10px] uppercase bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded border border-yellow-500/50">🏆 Award</span>}
+                  </div>
+                  <p className="text-xs font-mono text-green-400/80 mb-2">{project.tech}</p>
+                  <p className="text-sm text-neutral-400">{project.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Skills */}
           <div>
-            <h3 className="text-yellow-400 font-semibold mb-1">Full-Stack Development</h3>
-            <p>ReactJS, TailwindCSS, Express.js, Node.js, Django, CosmosDB, Postman, Google Cloud APIs (OAuth, Tasks, Calendar)</p>
+            <h2 className="text-3xl font-bold text-violet-400 drop-shadow-[0_0_10px_#a78bfa] mb-8 border-b border-violet-500/50 pb-2 inline-block">
+              SKILLS
+            </h2>
+            
+            <div className="space-y-6">
+              {/* Languages */}
+              <div>
+                <h4 className="text-sm text-violet-300 mb-2 uppercase tracking-widest">Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["C++ (11/14/17)", "Python", "JavaScript", "Java", "SQL", "Bash", "GraphQL"].map(s => (
+                    <span key={s} className="px-3 py-1 text-xs font-bold text-neutral-900 bg-violet-300 rounded-full shadow-[0_0_10px_#a78bfa]">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* AI/ML */}
+              <div>
+                <h4 className="text-sm text-cyan-300 mb-2 uppercase tracking-widest">AI / ML</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["PyTorch", "OpenCV", "Pandas", "Gemini 1.5 Pro", "OpenAI API", "BERT", "LangChain", "LangGraph"].map(s => (
+                    <span key={s} className="px-3 py-1 text-xs font-bold text-neutral-900 bg-cyan-300 rounded-full shadow-[0_0_10px_#22d3ee]">{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Full Stack */}
+              <div>
+                <h4 className="text-sm text-fuchsia-300 mb-2 uppercase tracking-widest">Full Stack & Tools</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["ReactJs", "Tailwind", "Node.js", "Django", "CosmosDB", "Google Cloud", "Git", "Docker"].map(s => (
+                    <span key={s} className="px-3 py-1 text-xs font-bold text-neutral-900 bg-fuchsia-300 rounded-full shadow-[0_0_10px_#d946ef]">{s}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
